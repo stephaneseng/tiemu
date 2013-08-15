@@ -1,0 +1,43 @@
+Description: Fix FTBFS: Undefine GTK_DISABLE_DEPRECATED before 
+ including gtk/gtk.h.  Cf. README
+Author: Ubuntu
+Reviewed-by: Ralf Treinen <treinen@debian.org>
+Reviewed-by: Andreas B. Mundt <andi@debian.org>
+Last-Update: 2013-08-15
+
+--- a/src/gui/calc/popup.c
++++ b/src/gui/calc/popup.c
+@@ -26,7 +26,9 @@
+ #  include <config.h>
+ #endif
+ 
++#undef GTK_DISABLE_DEPRECATED
+ #include <gtk/gtk.h>
++#define GTK_DISABLE_DEPRECATED
+ #include <glade/glade.h>
+ #include <stdlib.h>
+ #include <string.h>
+--- a/src/gui/debugger/dbg_romcall.c
++++ b/src/gui/debugger/dbg_romcall.c
+@@ -29,7 +29,9 @@
+ #  include <config.h>
+ #endif
+ 
++#undef GTK_DISABLE_DEPRECATED
+ #include <gtk/gtk.h>
++#define GTK_DISABLE_DEPRECATED
+ #include <glade/glade.h>
+ #include <string.h>
+ 
+--- a/src/gui/filesel.c
++++ b/src/gui/filesel.c
+@@ -41,7 +41,9 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#undef GTK_DISABLE_DEPRECATED
+ #include <gtk/gtk.h>
++#define GTK_DISABLE_DEPRECATED
+ #include <string.h>
+ 
+ #ifdef __WIN32__

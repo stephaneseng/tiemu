@@ -1,13 +1,13 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## 04_remove_depricated_gtk_calls.dpatch by  <dktrkranz@debian.org>
-##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: No description.
+Description: Fix FTBFS: Replace 'GTK_WIDGET_STATE'.
+ Cf. README
+Author: Scott Howard
+Reviewed-by: Luca Falavigna <dktrkranz@debian.org>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Reviewed-by: Andreas B. Mundt <andi@debian.org>
+Last-Update: 2013-08-15
 
-@DPATCH@
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/calc/calc.c tiemu-3.02/src/gui/calc/calc.c
---- tiemu-3.02~/src/gui/calc/calc.c	2007-12-16 16:29:16.000000000 +0100
-+++ tiemu-3.02/src/gui/calc/calc.c	2010-05-08 13:42:37.071928317 +0200
+--- a/src/gui/calc/calc.c
++++ b/src/gui/calc/calc.c
 @@ -313,7 +313,7 @@
  {
      gdk_draw_pixmap(
@@ -17,9 +17,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		pixmap,
  		event->area.x, event->area.y,
  		event->area.x, event->area.y,
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/calc/screen.c tiemu-3.02/src/gui/calc/screen.c
---- tiemu-3.02~/src/gui/calc/screen.c	2006-11-06 18:18:51.000000000 +0100
-+++ tiemu-3.02/src/gui/calc/screen.c	2010-05-08 13:42:37.071928317 +0200
+--- a/src/gui/calc/screen.c
++++ b/src/gui/calc/screen.c
 @@ -187,7 +187,7 @@
  	skin_infos.image = gdk_pixbuf_scale_simple(skin_infos.raw, wr.wr.w, wr.wr.h, GDK_INTERP_NEAREST);
  
@@ -56,13 +55,12 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  			  lcd_mem, src.x, src.y, lr.x, lr.y, src.w, src.h,
  			  GDK_RGB_DITHER_NONE, 0, 0);
  			gtk_widget_queue_draw_area(area, lr.x, lr.y, src.w, src.h);
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_all.c tiemu-3.02/src/gui/debugger/dbg_all.c
---- tiemu-3.02~/src/gui/debugger/dbg_all.c	2010-05-08 13:42:22.315925510 +0200
-+++ tiemu-3.02/src/gui/debugger/dbg_all.c	2010-05-08 13:42:37.071928317 +0200
-@@ -81,21 +81,21 @@
- 
- void gtk_debugger_refresh(void)
+--- a/src/gui/debugger/dbg_all.c
++++ b/src/gui/debugger/dbg_all.c
+@@ -90,21 +90,21 @@
  {	
+ 	WND_TMR_START();
+ 
 -	if(options3.dbg_dock || GTK_WIDGET_VISIBLE(dbgw.regs))
 +	if(options3.dbg_dock || gtk_widget_get_visible(dbgw.regs))
  		dbgregs_refresh_window();
@@ -87,9 +85,9 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
 -	if(options3.dbg_dock || GTK_WIDGET_VISIBLE(dbgw.iop))
 +	if(options3.dbg_dock || gtk_widget_get_visible(dbgw.iop))
  		dbgiop_refresh_window();
- }
  
-@@ -147,7 +147,7 @@
+ 	WND_TMR_STOP("Debugger Refresh Time");
+@@ -163,7 +163,7 @@
  	gtk_debugger_refresh();
  
  	// enable the debugger if GDB disabled it
@@ -98,7 +96,7 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_debugger_enable();
  
  	// handle automatic debugging requests
-@@ -164,7 +164,7 @@
+@@ -180,7 +180,7 @@
  
  			ti68k_bkpt_get_pgmentry_offset(id, &handle, &offset);
  			ti68k_bkpt_del_pgmentry(handle);
@@ -107,9 +105,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  				dbgbkpts_refresh_window();
  
  			delete_command(NULL, 0);
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_bkpts.c tiemu-3.02/src/gui/debugger/dbg_bkpts.c
---- tiemu-3.02~/src/gui/debugger/dbg_bkpts.c	2007-12-14 22:03:03.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_bkpts.c	2010-05-08 13:42:37.075928108 +0200
+--- a/src/gui/debugger/dbg_bkpts.c
++++ b/src/gui/debugger/dbg_bkpts.c
 @@ -388,7 +388,7 @@
  		gtk_window_iconify(GTK_WINDOW(wnd));
  #endif
@@ -119,10 +116,9 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(wnd);
  
  	return wnd;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_code.c tiemu-3.02/src/gui/debugger/dbg_code.c
---- tiemu-3.02~/src/gui/debugger/dbg_code.c	2007-12-31 00:14:15.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_code.c	2010-05-08 13:42:37.075928108 +0200
-@@ -1096,7 +1096,7 @@
+--- a/src/gui/debugger/dbg_code.c
++++ b/src/gui/debugger/dbg_code.c
+@@ -1117,7 +1117,7 @@
  
  int dbgcode_quit_enabled(void)
  {
@@ -131,9 +127,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  }
  
  static int close_debugger_wrapper(gpointer data)
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_dock.c tiemu-3.02/src/gui/debugger/dbg_dock.c
---- tiemu-3.02~/src/gui/debugger/dbg_dock.c	2007-12-14 22:03:43.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_dock.c	2010-05-08 13:43:13.795927044 +0200
+--- a/src/gui/debugger/dbg_dock.c
++++ b/src/gui/debugger/dbg_dock.c
 @@ -151,22 +151,22 @@
  
  void dbgdock_show_all(int all)
@@ -162,12 +157,9 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
 -	if(GTK_WIDGET_VISIBLE(dbgw.iop))
 +	if(gtk_widget_get_visible(dbgw.iop))
          gtk_widget_hide(dbgw.iop);
--}
-\ No newline at end of file
-+}
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_heap.c tiemu-3.02/src/gui/debugger/dbg_heap.c
---- tiemu-3.02~/src/gui/debugger/dbg_heap.c	2007-12-15 18:50:47.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_heap.c	2010-05-08 13:42:37.079927630 +0200
+ }
+--- a/src/gui/debugger/dbg_heap.c
++++ b/src/gui/debugger/dbg_heap.c
 @@ -171,7 +171,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.heap));
  #endif
@@ -177,9 +169,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(dbgw.heap);
  
  	return dbgw.heap;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_iop.c tiemu-3.02/src/gui/debugger/dbg_iop.c
---- tiemu-3.02~/src/gui/debugger/dbg_iop.c	2007-12-15 18:50:47.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_iop.c	2010-05-08 13:42:37.079927630 +0200
+--- a/src/gui/debugger/dbg_iop.c
++++ b/src/gui/debugger/dbg_iop.c
 @@ -455,7 +455,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.iop));
  #endif
@@ -189,9 +180,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(dbgw.iop);
  
  	return dbgw.iop;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_mem.c tiemu-3.02/src/gui/debugger/dbg_mem.c
---- tiemu-3.02~/src/gui/debugger/dbg_mem.c	2007-12-31 00:14:15.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_mem.c	2010-05-08 13:42:37.095933764 +0200
+--- a/src/gui/debugger/dbg_mem.c
++++ b/src/gui/debugger/dbg_mem.c
 @@ -435,7 +435,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.mem));
  #endif
@@ -201,9 +191,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(dbgw.mem);
  
      return dbgw.mem;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_pclog.c tiemu-3.02/src/gui/debugger/dbg_pclog.c
---- tiemu-3.02~/src/gui/debugger/dbg_pclog.c	2007-12-15 18:50:47.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_pclog.c	2010-05-08 13:42:37.111918589 +0200
+--- a/src/gui/debugger/dbg_pclog.c
++++ b/src/gui/debugger/dbg_pclog.c
 @@ -163,7 +163,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.pclog));
  #endif
@@ -213,9 +202,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(dbgw.pclog);
  
  	return dbgw.pclog;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_regs.c tiemu-3.02/src/gui/debugger/dbg_regs.c
---- tiemu-3.02~/src/gui/debugger/dbg_regs.c	2007-12-21 20:57:24.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_regs.c	2010-05-08 13:42:37.111918589 +0200
+--- a/src/gui/debugger/dbg_regs.c
++++ b/src/gui/debugger/dbg_regs.c
 @@ -302,7 +302,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.regs));
  #endif
@@ -225,9 +213,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(dbgw.regs);
  
  	return dbgw.regs;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_stack.c tiemu-3.02/src/gui/debugger/dbg_stack.c
---- tiemu-3.02~/src/gui/debugger/dbg_stack.c	2007-12-15 18:50:47.000000000 +0100
-+++ tiemu-3.02/src/gui/debugger/dbg_stack.c	2010-05-08 13:42:37.111918589 +0200
+--- a/src/gui/debugger/dbg_stack.c
++++ b/src/gui/debugger/dbg_stack.c
 @@ -197,7 +197,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.stack));
  #endif
@@ -237,9 +224,8 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
  		gtk_widget_show(dbgw.stack);
  
  	return dbgw.stack;
-diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_wnds.c tiemu-3.02/src/gui/debugger/dbg_wnds.c
---- tiemu-3.02~/src/gui/debugger/dbg_wnds.c	2010-05-08 13:42:22.315925510 +0200
-+++ tiemu-3.02/src/gui/debugger/dbg_wnds.c	2010-05-08 13:43:34.895905709 +0200
+--- a/src/gui/debugger/dbg_wnds.c
++++ b/src/gui/debugger/dbg_wnds.c
 @@ -74,21 +74,21 @@
  	if(options3.dbg_dock)
  		return;
@@ -423,10 +409,3 @@ diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' 
      g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_ioports_frame1_activate, NULL);
  
  	// dock/multi mode
-@@ -718,4 +718,4 @@
- {
- 	printf("Duration (%s): %i ms\n", str, TO_CURRENT(profile));
- }
--*/
-\ No newline at end of file
-+*/

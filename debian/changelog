@@ -1,3 +1,19 @@
+tiemu (3.03-nogdb+dfsg-1) UNRELEASED; urgency=low
+
+  * Team maintained in Debian-Science now (closes: #678861).
+    Modifications in cooperation with Albert Huang
+    <alberth.debian@gmail.com>, thanks!
+  * New upstream release.
+  * Switch packaging format to 3.0 (quilt), Standards-Version to 3.9.4
+    and debhelper to 9 (closes #661033).  Thanks to Jari Aalto
+    <jari.aalto@cante.net>.
+  * Update patches, and:
+    - Remove 02_tiemu3_dock_fixes.dpatch, fixed upstream.
+    - Remove 03_memset_include_cstring.dpatch, fixed upstream.
+    - Remove 05_remove_vlc_cable.dpatch, fixed upstream.
+
+ -- Andreas B. Mundt <andi@debian.org>  Mon, 12 Aug 2013 09:37:30 +0200
+
 tiemu (3.02-1.2) unstable; urgency=low
 
   * Non-maintainer upload.
@@ -180,7 +196,7 @@ gtktiemu (1.53-4) unstable; urgency=low
       rcfile.c (TTY1 => SP2_NAME)
       rcfile.h (remove DLLEXPORT)
       gtk_refresh.c (use new rate mechanism)
-      error.c (remove DLLEXPORT) 
+      error.c (remove DLLEXPORT)
 
  -- Julien BLACHE <jblache@debian.org>  Sat, 16 Feb 2002 15:48:04 +0100
 
@@ -227,7 +243,7 @@ gtktiemu (1.42-3) unstable; urgency=low
 
 gtktiemu (1.42-2) unstable; urgency=medium
 
-  * Fixed description (closes: Bug#102936). 
+  * Fixed description (closes: Bug#102936).
 
  -- Julien BLACHE <jblache@debian.org>  Sun,  8 Jul 2001 11:33:35 +0200
 

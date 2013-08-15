@@ -1,0 +1,18 @@
+Description: Fix FTBFS: Replace 'GtkNotebookPage'.
+ Cf. README
+Author: <scott@kitterman.com>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Reviewed-by: Andreas B. Mundt <andi@debian.org>
+Last-Update: 2013-08-15
+
+--- a/src/gui/debugger/dbg_mem.c
++++ b/src/gui/debugger/dbg_mem.c
+@@ -605,7 +605,7 @@
+ 
+ GLADE_CB void
+ on_notebook1_switch_page               (GtkNotebook     *notebook,
+-                                        GtkNotebookPage *page,
++                                        gpointer *page,
+                                         guint            page_num,
+                                         gpointer         user_data)
+ {

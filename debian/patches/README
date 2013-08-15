@@ -1,0 +1,24 @@
+## These commands create all patches:
+
+sed -i "s/(GtkFunction)/(GSourceFunc)/" src/gui/calc/calc.c
+
+################
+
+sed -i 's/GtkNotebookPage/gpointer/' src/gui/debugger/dbg_mem.c
+
+################
+
+sed -i -e "/\#include <gtk\/gtk.h>/i \
+\#undef GTK_DISABLE_DEPRECATED" src/gui/calc/popup.c src/gui/debugger/dbg_romcall.c src/gui/filesel.c
+sed -i -e "/\#include <gtk\/gtk.h>/a \
+\#define GTK_DISABLE_DEPRECATED" src/gui/calc/popup.c src/gui/debugger/dbg_romcall.c src/gui/filesel.c
+
+################
+
+sed -i 's/\([^)][,| ]\) message)/\1 "%s", message)/' src/gui/calc/popup.c src/gui/dboxes.c
+
+###############
+
+sed -i -s "s/GTK_WIDGET_STATE/gtk_widget_get_state/" src/gui/calc/calc.c src/gui/calc/screen.c
+sed -i -s "s/GTK_WIDGET_VISIBLE/gtk_widget_get_visible/" src/gui/debugger/dbg_*.c
+sed -i -s "s/GTK_WIDGET_SENSITIVE/gtk_widget_get_sensitive/" src/gui/debugger/dbg_all.c src/gui/debugger/dbg_code.c
