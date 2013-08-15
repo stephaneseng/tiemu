@@ -1,0 +1,2572 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: tiemu-users@lists.sourceforge.net\n"
+"POT-Creation-Date: 2009-05-30 00:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/core/ti_hw/flash.c:261
+#, c-format
+msgid "found SSP=$%06x and PC=$%06x at offset 0x%x"
+msgstr ""
+
+#: src/core/ti_sw/iodefs.c:351
+#, c-format
+msgid "loading I/O defs: %s (%i entries)"
+msgstr ""
+
+#: src/core/ti_sw/mem_map.c:163
+#, c-format
+msgid "loading memory map: %s"
+msgstr ""
+
+#: src/core/error.c:49
+msgid "No error."
+msgstr ""
+
+#: src/core/error.c:53
+msgid "Can not open file."
+msgstr ""
+
+#: src/core/error.c:57
+msgid "Can not open state image: file is corrupted or missing."
+msgstr ""
+
+#: src/core/error.c:61
+msgid ""
+"Can not open state image: revision changed. You have to recreate the state "
+"image."
+msgstr ""
+
+#: src/core/error.c:65
+msgid ""
+"Can not open state image: state image header does not match ROM image "
+"header: have you changed/updated your ROM image?"
+msgstr ""
+
+#: src/core/error.c:69
+msgid ""
+"Can not open state image: this state image is not targetted for your current "
+"emulator image (calculator model and/or OS version must match!). Choose "
+"another image before."
+msgstr ""
+
+#: src/core/error.c:73
+msgid "Invalid emulator image. File is corrupted or revision changed."
+msgstr ""
+
+#: src/core/error.c:77 src/gui/wizard.c:289
+msgid "Invalid FLASH upgrade."
+msgstr ""
+
+#: src/core/error.c:81 src/gui/wizard.c:253
+msgid "Invalid ROM dump."
+msgstr ""
+
+#: src/core/error.c:85
+msgid "No image."
+msgstr ""
+
+#: src/core/error.c:89
+msgid "ROM dump has a weird size."
+msgstr ""
+
+#: src/core/error.c:93
+msgid "This is not recognized as a TI file."
+msgstr ""
+
+#: src/core/error.c:97
+msgid "Can't parse folder."
+msgstr ""
+
+#: src/core/error.c:101
+msgid "Can't upgrade calculator."
+msgstr ""
+
+#: src/core/error.c:105
+msgid ""
+"Error code not found in the list.\n"
+"This is a bug. Please report it."
+msgstr ""
+
+#: src/core/images.c:121
+msgid "ROM information:"
+msgstr ""
+
+#: src/core/images.c:122 src/core/images.c:133 src/core/images.c:143
+#, c-format
+msgid "  Calculator  : %s"
+msgstr ""
+
+#: src/core/images.c:123 src/core/images.c:134 src/core/images.c:144
+#, c-format
+msgid "  Firmware    : %s"
+msgstr ""
+
+#: src/core/images.c:124 src/core/images.c:135 src/core/images.c:145
+#, c-format
+msgid "  Memory type : %s"
+msgstr ""
+
+#: src/core/images.c:125 src/core/images.c:136 src/core/images.c:146
+#, c-format
+msgid "  Memory size : %iMB (%i bytes)"
+msgstr ""
+
+#: src/core/images.c:126 src/core/images.c:137 src/core/images.c:147
+#, c-format
+msgid "  ROM base    : %02x"
+msgstr ""
+
+#: src/core/images.c:127 src/core/images.c:148
+#, c-format
+msgid "  Hardware    : %i"
+msgstr ""
+
+#: src/core/images.c:132
+msgid "TIB information:"
+msgstr ""
+
+#: src/core/images.c:142
+msgid "Image information:"
+msgstr ""
+
+#: src/core/images.c:149
+#, c-format
+msgid "  Has boot    : %s"
+msgstr ""
+
+#: src/core/images.c:149 src/core/images.c:1092
+msgid "yes"
+msgstr ""
+
+#: src/core/images.c:149 src/core/images.c:1092
+msgid "no"
+msgstr ""
+
+#: src/core/images.c:176 src/core/images.c:1045
+#, c-format
+msgid "Unable to open this file: <%s>"
+msgstr ""
+
+#: src/core/images.c:190
+#, c-format
+msgid "Warning: truncating 8 MB image to 4 MB: <%s>"
+msgstr ""
+
+#: src/core/images.c:203
+#, c-format
+msgid "Failed to read from file: <%s>"
+msgstr ""
+
+#: src/core/images.c:209
+#, c-format
+msgid "Failed to close file: <%s>"
+msgstr ""
+
+#: src/core/images.c:463 src/core/images.c:753 src/core/images.c:767
+#, c-format
+msgid "Unable to get information on ROM dump: %s"
+msgstr ""
+
+#: src/core/images.c:490
+msgid "Completing image to 4 MB!"
+msgstr ""
+
+#: src/core/images.c:547 src/core/images.c:914
+#, c-format
+msgid "Unable to get information on FLASH upgrade: <%s>"
+msgstr ""
+
+#: src/core/images.c:838
+#, c-format
+msgid "Unable to get information on image: %s"
+msgstr ""
+
+#: src/core/images.c:973 src/core/images.c:1053 src/core/images.c:1191
+msgid "Opendir error"
+msgstr ""
+
+#: src/core/images.c:1039
+msgid "Scanning images/upgrades... "
+msgstr ""
+
+#: src/core/images.c:1067
+#, c-format
+msgid "Can not stat: <%s>"
+msgstr ""
+
+#: src/core/images.c:1078
+#, c-format
+msgid "Can not get ROM/update info: <%s>"
+msgstr ""
+
+#: src/core/images.c:1107
+msgid "Done."
+msgstr ""
+
+#: src/core/interface.c:252 src/core/interface.c:263 src/core/interface.c:274
+#: src/core/interface.c:285 src/core/interface.c:296
+msgid "Bad argument!"
+msgstr ""
+
+#: src/core/state.c:178
+#, c-format
+msgid "loading state image: %s"
+msgstr ""
+
+#: src/core/state.c:353
+#, c-format
+msgid "saving state image (TiEmu v2.00 format): %s"
+msgstr ""
+
+#: src/core/type2str.c:118
+msgid "Initial SSP"
+msgstr ""
+
+#: src/core/type2str.c:119
+msgid "Initial PC"
+msgstr ""
+
+#: src/core/type2str.c:120
+msgid "Bus Error vector"
+msgstr ""
+
+#: src/core/type2str.c:121
+msgid "Address Error vector"
+msgstr ""
+
+#: src/core/type2str.c:122
+msgid "Illegal Instruction vector"
+msgstr ""
+
+#: src/core/type2str.c:123
+msgid "Zero Divide vector"
+msgstr ""
+
+#: src/core/type2str.c:124
+msgid "CHK Instruction vector"
+msgstr ""
+
+#: src/core/type2str.c:125
+msgid "TRAPV Instruction vector"
+msgstr ""
+
+#: src/core/type2str.c:126
+msgid "Privilege Violation vector"
+msgstr ""
+
+#: src/core/type2str.c:127
+msgid "Trace vector"
+msgstr ""
+
+#: src/core/type2str.c:128
+msgid "Line 1010 Emulator vectors"
+msgstr ""
+
+#: src/core/type2str.c:129
+msgid "Line 1111 Emulator vectors"
+msgstr ""
+
+#: src/core/type2str.c:130 src/core/type2str.c:131 src/core/type2str.c:132
+#: src/core/type2str.c:134 src/core/type2str.c:135 src/core/type2str.c:136
+#: src/core/type2str.c:137 src/core/type2str.c:138 src/core/type2str.c:139
+#: src/core/type2str.c:140 src/core/type2str.c:141 src/core/type2str.c:181
+msgid "Unassigned, reserved"
+msgstr ""
+
+#: src/core/type2str.c:133
+msgid "Uninitialised Interrupt vector"
+msgstr ""
+
+#: src/core/type2str.c:142
+msgid "Spurious Interrupt vector"
+msgstr ""
+
+#: src/core/type2str.c:143
+msgid "Level 1 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:144
+msgid "Level 2 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:145
+msgid "Level 3 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:146
+msgid "Level 4 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:147
+msgid "Level 5 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:148
+msgid "Level 6 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:149
+msgid "Level 7 Interrupt auto-vectors"
+msgstr ""
+
+#: src/core/type2str.c:150
+msgid "TRAP #0 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:151
+msgid "TRAP #1 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:152
+msgid "TRAP #2 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:153
+msgid "TRAP #3 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:154
+msgid "TRAP #4 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:155
+msgid "TRAP #5 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:156
+msgid "TRAP #6 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:157
+msgid "TRAP #7 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:158
+msgid "TRAP #8 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:159
+msgid "TRAP #9 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:160
+msgid "TRAP #10 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:161
+msgid "TRAP #11 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:162
+msgid "TRAP #12 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:163
+msgid "TRAP #13 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:164
+msgid "TRAP #14 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:165
+msgid "TRAP #15 Instruction vectors"
+msgstr ""
+
+#: src/core/type2str.c:182 src/core/type2str.c:184
+msgid "User Interrupt vectors"
+msgstr ""
+
+#: src/core/type2str.c:192 src/core/type2str.c:208 src/core/type2str.c:221
+#: src/gui/debugger/dbg_bkpts.c:296 glade/dbg_cause-2.str:11
+msgid "access"
+msgstr ""
+
+#: src/core/type2str.c:193
+msgid "access range"
+msgstr ""
+
+#: src/core/type2str.c:194
+msgid "address"
+msgstr ""
+
+#: src/core/type2str.c:195 src/core/type2str.c:211 src/core/type2str.c:227
+msgid "exception"
+msgstr ""
+
+#: src/core/type2str.c:196 src/core/type2str.c:212 src/core/type2str.c:229
+msgid "prgm entry"
+msgstr ""
+
+#: src/core/type2str.c:197 src/core/type2str.c:213 src/core/type2str.c:231
+msgid "hw protection"
+msgstr ""
+
+#: src/core/type2str.c:198 src/core/type2str.c:214 src/core/type2str.c:233
+msgid "bit change"
+msgstr ""
+
+#: src/core/type2str.c:199 src/core/type2str.c:215 src/gui/infos.c:61
+msgid "unknown"
+msgstr ""
+
+#: src/core/type2str.c:209 src/core/type2str.c:223
+#: src/gui/debugger/dbg_bkpts.c:296
+msgid "range"
+msgstr ""
+
+#: src/core/type2str.c:210 src/core/type2str.c:225
+msgid "code"
+msgstr ""
+
+#: src/core/hwpm.c:61
+msgid "Hardware Parameters Block:"
+msgstr ""
+
+#: src/core/hwpm.c:62
+#, c-format
+msgid "  length           : %i"
+msgstr ""
+
+#: src/core/hwpm.c:121
+msgid ""
+"Detected V200 patched ROM (ExtendeD): emulated as TI92+ by changing the hwID "
+"from 8 to 1."
+msgstr ""
+
+#: src/core/hwpm.c:127
+msgid ""
+"Detected TI89 Titanium patched ROM (ExtendeD): emulated as TI89 by changing "
+"the hwID from 9 to 3."
+msgstr ""
+
+#: src/misc/cmdline.c:62
+#, c-format
+msgid "THIS PROGRAM COMES WITH ABSOLUTELY NO WARRANTY\n"
+msgstr ""
+
+#: src/misc/cmdline.c:63
+#, c-format
+msgid "PLEASE READ THE DOCUMENTATION FOR DETAILS\n"
+msgstr ""
+
+#: src/misc/files.c:95 src/misc/files.c:107 src/misc/files.c:123
+#: src/gui/calc/keyboard.c:77 src/gui/calc/popup.c:176
+#: src/gui/calc/popup.c:179 src/gui/calc/popup.c:191 src/gui/dboxes.c:42
+#: src/gui/fs_misc.c:155 src/gui/fs_misc.c:158
+msgid "Information"
+msgstr ""
+
+#: src/misc/files.c:95
+msgid "Unable to remove the file!"
+msgstr ""
+
+#: src/misc/files.c:107
+msgid ""
+"Unable to move file.\n"
+"\n"
+msgstr ""
+
+#: src/misc/files.c:123
+msgid ""
+"Unable to create the directory.\n"
+"\n"
+msgstr ""
+
+#: src/misc/files.c:151
+#, c-format
+msgid ""
+"The file %s already exists.\n"
+"Overwrite?"
+msgstr ""
+
+#: src/misc/files.c:153 src/gui/dboxes.c:44 src/gui/fs_misc.c:82
+#: src/gui/fs_misc.c:239
+msgid "Warning"
+msgstr ""
+
+#: src/misc/files.c:154
+msgid "Overwrite "
+msgstr ""
+
+#: src/misc/files.c:154
+msgid "Rename "
+msgstr ""
+
+#: src/misc/files.c:154
+msgid "Skip "
+msgstr ""
+
+#: src/misc/files.c:164
+msgid "Rename the file"
+msgstr ""
+
+#: src/misc/files.c:165
+msgid "New name: "
+msgstr ""
+
+#: src/misc/files.c:209 src/misc/tie_error.c:78 src/gui/calc/popup.c:797
+#: src/gui/calc/popup.c:847 src/gui/dboxes.c:48 src/gui/fs_misc.c:212
+#: src/gui/fs_misc.c:391 src/gui/fs_misc.c:421 src/gui/fs_misc.c:437
+#: src/gui/fs_misc.c:502 src/gui/main.c:218 src/gui/main.c:226
+#: src/gui/main.c:234 src/gui/main.c:242 src/gui/quicksend.c:120
+#: src/gui/wizard.c:253 src/gui/wizard.c:289
+msgid "Error"
+msgstr ""
+
+#: src/misc/files.c:209
+msgid "Unable to move the temporary file.\n"
+msgstr ""
+
+#: src/misc/rcfile.c:76
+#, c-format
+msgid "Configuration file error at line %i."
+msgstr ""
+
+#: src/misc/rcfile.c:181
+msgid ""
+"Configuration file not found, use default values. You can create one by the "
+"'File|Save config' command menu."
+msgstr ""
+
+#: src/misc/screenshot.c:70
+msgid "Couldn't allocate memory!"
+msgstr ""
+
+#: src/misc/screenshot.c:81
+msgid "zlib init error"
+msgstr ""
+
+#: src/misc/screenshot.c:97
+msgid "zlib deflate error"
+msgstr ""
+
+#: src/misc/screenshot.c:187 src/misc/screenshot.c:237
+msgid "Couldn't open destination file for writing!"
+msgstr ""
+
+#: src/gui/calc/calc.c:234 src/gui/calc/popup.c:655
+#: src/gui/debugger/dbg_bkpts.c:363 src/gui/debugger/dbg_bits.c:50
+#: src/gui/debugger/dbg_cause.c:60 src/gui/debugger/dbg_cause.c:144
+#: src/gui/debugger/dbg_code.c:357 src/gui/debugger/dbg_code.c:698
+#: src/gui/debugger/dbg_code.c:1160 src/gui/debugger/dbg_data.c:56
+#: src/gui/debugger/dbg_entry.c:207 src/gui/debugger/dbg_heap.c:146
+#: src/gui/debugger/dbg_heap.c:267 src/gui/debugger/dbg_iop.c:430
+#: src/gui/debugger/dbg_mem.c:712 src/gui/debugger/dbg_mem.c:1087
+#: src/gui/debugger/dbg_mem.c:1311 src/gui/debugger/dbg_pclog.c:138
+#: src/gui/debugger/dbg_regs.c:194 src/gui/debugger/dbg_regs.c:539
+#: src/gui/debugger/dbg_stack.c:163 src/gui/debugger/dbg_stack.c:417
+#: src/gui/debugger/dbg_vectors.c:145 src/gui/logger/log_link.c:62
+#: src/gui/infos.c:50 src/gui/manpage.c:72 src/gui/pbars.c:63
+#: src/gui/quicksend.c:59 src/gui/release.c:77 src/gui/romversion.c:191
+#: src/gui/scroptions.c:61 src/gui/wizard.c:71
+#, c-format
+msgid "%s: GUI loading failed!\n"
+msgstr ""
+
+#: src/gui/calc/calc.c:751
+#, c-format
+msgid "screenshot to %s... "
+msgstr ""
+
+#: src/gui/calc/calc.c:770
+msgid "unsupported screenshot options combination, screenshot aborted."
+msgstr ""
+
+#: src/gui/calc/calc.c:797
+#, c-format
+msgid "failed to save pixbuf file: %s: %s"
+msgstr ""
+
+#: src/gui/calc/calc.c:802
+msgid "done!"
+msgstr ""
+
+#: src/gui/calc/keymap.c:207
+#, c-format
+msgid "loading keymap: %s (%i keys)"
+msgstr ""
+
+#: src/gui/calc/keypress.c:58 src/gui/calc/keypress.c:84
+msgid "Can't open file."
+msgstr ""
+
+#: src/gui/calc/popup.c:71
+#, c-format
+msgid "* TiEmu version %s (cables=%s, files=%s, calcs=%s, conv=%s)"
+msgstr ""
+
+#: src/gui/calc/popup.c:177
+msgid "Configuration file saved (in tiemu.ini)."
+msgstr ""
+
+#: src/gui/calc/popup.c:180
+msgid "Configuration file saved (in ~/.tiemu)."
+msgstr ""
+
+#: src/gui/calc/popup.c:191
+msgid "Configuration file loaded."
+msgstr ""
+
+#: src/gui/calc/popup.c:267 src/gui/dboxes.c:46
+msgid "Question"
+msgstr ""
+
+#: src/gui/calc/popup.c:267
+msgid "Clear RAM?"
+msgstr ""
+
+#: src/gui/calc/popup.c:512
+msgid "Manual_en.html"
+msgstr ""
+
+#: src/gui/calc/popup.c:533
+msgid "You're using GTK+ >= 2.12 so bookmark support is currently unavailable."
+msgstr ""
+
+#: src/gui/calc/popup.c:553
+msgid ""
+"There are several ways to get in touch if you encounter a problem with TiEmu "
+"or if you have questions, suggestions, bug reports, etc:\n"
+"- if you have general questions or problems, please consider the users' "
+"mailing list first (http://tiemu-users@list.sf.net).\n"
+"- if you want to discuss about TiEmu, you can use the TiEmu forum (http://"
+"sourceforge.net/forum/?group_id=23169).\n"
+"- for bug reports, use the 'Bug Tracking System' (http://sourceforge.net/"
+"tracker/?group_id=23169).\n"
+"\n"
+"Before e-mailing the TiEmu team, make sure you have read the manual and/or "
+"the FAQ...."
+msgstr ""
+
+#: src/gui/calc/popup.c:797
+msgid "Unable to run ShellExecute extension."
+msgstr ""
+
+#: src/gui/calc/popup.c:847
+msgid "Spawn error: do you have Firefox installed?"
+msgstr ""
+
+#: src/gui/calc/skinops.c:449
+#, c-format
+msgid "loading skin: %s (%d x %d)"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:63
+msgid "Symbol"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:63 src/gui/romversion.c:88
+#: glade/dbg_data-2.str:22
+msgid "Type"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:63
+msgid "Status"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:63 glade/log_link-2.str:9
+msgid "Start"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:63
+msgid "End"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:63 glade/dbg_data-2.str:11
+msgid "Mode"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:140 src/gui/debugger/dbg_bkpts.c:167
+#: src/gui/debugger/dbg_bkpts.c:195 src/gui/debugger/dbg_bkpts.c:224
+#: src/gui/debugger/dbg_bkpts.c:251 src/gui/debugger/dbg_bkpts.c:335
+msgid "enabled"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:140 src/gui/debugger/dbg_bkpts.c:167
+#: src/gui/debugger/dbg_bkpts.c:195 src/gui/debugger/dbg_bkpts.c:224
+#: src/gui/debugger/dbg_bkpts.c:251 src/gui/debugger/dbg_bkpts.c:335
+msgid "disabled"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:143 src/gui/debugger/dbg_bkpts.c:338
+msgid "one-shot"
+msgstr ""
+
+#: src/gui/debugger/dbg_bkpts.c:426
+msgid "dbg_bkpts-2.glade: GUI loading failed !\n"
+msgstr ""
+
+#: src/gui/debugger/dbg_code.c:75 src/gui/debugger/dbg_heap.c:55
+#: src/gui/debugger/dbg_iop.c:299 src/gui/debugger/dbg_mem.c:185
+#: src/gui/debugger/dbg_pclog.c:54 src/gui/debugger/dbg_stack.c:58
+msgid "Address"
+msgstr ""
+
+#: src/gui/debugger/dbg_code.c:75
+msgid "Opcode"
+msgstr ""
+
+#: src/gui/debugger/dbg_code.c:75
+msgid "Operand"
+msgstr ""
+
+#: src/gui/debugger/dbg_code.c:1244
+msgid "Choose font..."
+msgstr ""
+
+#: src/gui/debugger/dbg_entry.c:91 src/gui/debugger/dbg_iop.c:264
+#: src/gui/debugger/dbg_vectors.c:53
+msgid "Name"
+msgstr ""
+
+#: src/gui/debugger/dbg_heap.c:55
+msgid "Id"
+msgstr ""
+
+#: src/gui/debugger/dbg_heap.c:55 src/gui/romversion.c:88
+msgid "Size"
+msgstr ""
+
+#: src/gui/debugger/dbg_iop.c:272 src/gui/debugger/dbg_stack.c:58
+msgid "Value"
+msgstr ""
+
+#: src/gui/debugger/dbg_iop.c:308
+msgid "Mask"
+msgstr ""
+
+#: src/gui/debugger/dbg_vectors.c:53
+msgid "Number"
+msgstr ""
+
+#: src/gui/about.c:97
+#, c-format
+msgid "Framework version (cables=%s, files=%s, calcs=%s, conv=%s)"
+msgstr ""
+
+#: src/gui/device.c:59 src/gui/wizard.c:95 src/gui/wizard.c:180
+#: src/gui/wizard.c:219
+msgid "comm.c: GUI loading failed !\n"
+msgstr ""
+
+#: src/gui/filesel.c:389
+msgid "Save file"
+msgstr ""
+
+#: src/gui/filesel.c:392 src/gui/filesel.c:701 glade/quicksend-2.str:9
+msgid "Open file"
+msgstr ""
+
+#: src/gui/fs_misc.c:83
+msgid ""
+"The state image you are attempting to load does not match the current "
+"running image. Press OK if you want TiEmu to automatically load the "
+"corresponding image or Cancel to abort."
+msgstr ""
+
+#: src/gui/fs_misc.c:156
+msgid ""
+"You do not seem to have saved your settings. Configuration file saved (in "
+"tiemu.ini)."
+msgstr ""
+
+#: src/gui/fs_misc.c:159
+msgid ""
+"You do not seem to have saved your settings. Configuration file saved (in ~/."
+"tiemu)."
+msgstr ""
+
+#: src/gui/fs_misc.c:173
+msgid "Sending app(s)"
+msgstr ""
+
+#: src/gui/fs_misc.c:177 src/gui/fs_misc.c:185
+msgid "Sending var(s)"
+msgstr ""
+
+#: src/gui/fs_misc.c:181 src/gui/fs_misc.c:189
+msgid "Restoring"
+msgstr ""
+
+#: src/gui/fs_misc.c:212 src/gui/fs_misc.c:391 src/gui/quicksend.c:120
+msgid "This file is not a valid TI file."
+msgstr ""
+
+#: src/gui/fs_misc.c:236
+#, c-format
+msgid ""
+"The current link cable <%s> port <%s> does not allow direct file loading. Do "
+"you let me change link port settings to allow direct file loading?"
+msgstr ""
+
+#: src/gui/fs_misc.c:421
+msgid "Does not seem to be an upgrade."
+msgstr ""
+
+#: src/gui/fs_misc.c:437
+msgid "Cannot load the upgrade."
+msgstr ""
+
+#: src/gui/fs_misc.c:473 src/gui/fs_misc.c:483
+msgid "HW type"
+msgstr ""
+
+#: src/gui/fs_misc.c:474
+msgid "The FLASH upgrade can be imported as HW1 or HW2. Please choose..."
+msgstr ""
+
+#: src/gui/fs_misc.c:484
+msgid "The FLASH upgrade can be imported as HW3 or HW4. Please choose..."
+msgstr ""
+
+#: src/gui/fs_misc.c:502
+msgid "This is not a valid file"
+msgstr ""
+
+#: src/gui/main.c:153
+msgid "Unable to initialize audio, sound will not play\n"
+msgstr ""
+
+#: src/gui/main.c:187
+msgid "Initializing GTK+..."
+msgstr ""
+
+#: src/gui/main.c:191
+msgid "Initializing KDE..."
+msgstr ""
+
+#: src/gui/main.c:192 glade/device-2.str:15 glade/popup-2.str:78
+msgid "TiEmu"
+msgstr ""
+
+#: src/gui/main.c:192
+msgid "TI calculator emulator"
+msgstr ""
+
+#: src/gui/main.c:198
+msgid "Initializing D-Bus..."
+msgstr ""
+
+#: src/gui/main.c:204
+msgid "Initializing OLE..."
+msgstr ""
+
+#: src/gui/main.c:212
+msgid "Initializing TiLP framework..."
+msgstr ""
+
+#: src/gui/main.c:216
+#, c-format
+msgid "libticonv library version <%s> mini required (<%s> found)."
+msgstr ""
+
+#: src/gui/main.c:218
+msgid "libticonv: version mismatches."
+msgstr ""
+
+#: src/gui/main.c:224
+#, c-format
+msgid "libtifiles library version <%s> mini required (<%s> found)."
+msgstr ""
+
+#: src/gui/main.c:226
+msgid "libtifiles: version mismatches."
+msgstr ""
+
+#: src/gui/main.c:232
+#, c-format
+msgid "libticables library version <%s> mini required (<%s> found)."
+msgstr ""
+
+#: src/gui/main.c:234
+msgid "libticables: version mismatches."
+msgstr ""
+
+#: src/gui/main.c:240
+#, c-format
+msgid "libticalcs library version <%s> mini required (<%s> found)."
+msgstr ""
+
+#: src/gui/main.c:242
+msgid "libticalcs: version mismatches."
+msgstr ""
+
+#: src/gui/main.c:249
+msgid "Searching for ROM dumps..."
+msgstr ""
+
+#: src/gui/main.c:291
+msgid "Loading image..."
+msgstr ""
+
+#: src/gui/main.c:299
+msgid "Initializing m68k emulation engine..."
+msgstr ""
+
+#: src/gui/main.c:331
+msgid "Loading previously saved state..."
+msgstr ""
+
+#: src/gui/main.c:342
+msgid "Pre-loading debugger..."
+msgstr ""
+
+#: src/gui/romversion.c:87
+msgid "Filename"
+msgstr ""
+
+#: src/gui/romversion.c:87
+msgid "Model"
+msgstr ""
+
+#: src/gui/romversion.c:87
+msgid "Version"
+msgstr ""
+
+#: src/gui/romversion.c:88
+msgid "Boot"
+msgstr ""
+
+#: src/gui/romversion.c:88
+msgid "Hardware"
+msgstr ""
+
+#: src/gui/support.c:91 src/gui/support.c:115
+#, c-format
+msgid "Couldn't find pixmap file: %s"
+msgstr ""
+
+#: src/gui/wizard.c:110
+msgid "Use PedRom"
+msgstr ""
+
+#: src/gui/wizard.c:112
+msgid "Use FLASH OS"
+msgstr ""
+
+#: src/gui/wizard.c:114
+msgid "Use ROM dump"
+msgstr ""
+
+#: src/gui/wizard.c:131
+msgid "Importing TIBs. Please wait..."
+msgstr ""
+
+#: src/sound/audio.c:36
+msgid "Unable to initialize sound"
+msgstr ""
+
+#: src/sound/audio.c:65
+msgid "Sound Error"
+msgstr ""
+
+#: src/sound/audio.c:65
+msgid "Not enough memory"
+msgstr ""
+
+#: src/sound/audio.c:75
+msgid "Unable to open audio device"
+msgstr ""
+
+#: src/sound/stream.c:54
+msgid "sound buffer full, dropping sample(s)"
+msgstr ""
+
+#: glade/calc-2.str:7
+msgid "TiEmu 3"
+msgstr ""
+
+#: glade/calc-2.str:8
+msgid "Use mouse or press a key."
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:7
+msgid "Breakpoints"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:8
+msgid "Add breakpoint"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:9
+msgid "Remove breakpoint(s)"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:10
+msgid "Disable breakpoint"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:11
+msgid "Enable breakpoint"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:12
+msgid "Go to breakpoint location"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:13
+msgid "Double-click a row to edit breakpoint values."
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:14
+msgid "Breakpoint context:"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:15
+msgid "Bits"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:16
+msgid "Data"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:17
+msgid "Vectors"
+msgstr ""
+
+#: glade/dbg_bkpts-2.str:18
+msgid "Prgm entry"
+msgstr ""
+
+#: glade/dbg_bits-2.str:7
+msgid "Add Bit Breakpoint"
+msgstr ""
+
+#: glade/dbg_bits-2.str:8 glade/dbg_cause-2.str:8
+msgid "Address:"
+msgstr ""
+
+#: glade/dbg_bits-2.str:9 glade/dbg_cause-2.str:10 glade/dbg_data-2.str:16
+#: glade/dbg_data-2.str:17 glade/dbg_data-2.str:18
+msgid "0x000000"
+msgstr ""
+
+#: glade/dbg_bits-2.str:10
+msgid "Checks:"
+msgstr ""
+
+#: glade/dbg_bits-2.str:11 glade/dbg_bits-2.str:20
+msgid "7"
+msgstr ""
+
+#: glade/dbg_bits-2.str:12 glade/dbg_bits-2.str:21
+msgid "6"
+msgstr ""
+
+#: glade/dbg_bits-2.str:13 glade/dbg_bits-2.str:22
+msgid "5"
+msgstr ""
+
+#: glade/dbg_bits-2.str:14 glade/dbg_bits-2.str:23
+msgid "4"
+msgstr ""
+
+#: glade/dbg_bits-2.str:15 glade/dbg_bits-2.str:24
+msgid "3"
+msgstr ""
+
+#: glade/dbg_bits-2.str:16 glade/dbg_bits-2.str:25
+msgid "2"
+msgstr ""
+
+#: glade/dbg_bits-2.str:17 glade/dbg_bits-2.str:26
+msgid "1"
+msgstr ""
+
+#: glade/dbg_bits-2.str:18 glade/dbg_bits-2.str:27 glade/dbg_code-2.str:48
+#: glade/dbg_regs-2.str:13 glade/dbg_regs-2.str:15 glade/dbg_regs-2.str:16
+#: glade/dbg_regs-2.str:19 glade/dbg_regs-2.str:20 glade/dbg_regs-2.str:21
+msgid "0"
+msgstr ""
+
+#: glade/dbg_bits-2.str:19
+msgid "States:"
+msgstr ""
+
+#: glade/dbg_cause-2.str:7
+msgid "Breakpoint!"
+msgstr ""
+
+#: glade/dbg_cause-2.str:9 glade/dbg_cause-2.str:20
+msgid "Type:"
+msgstr ""
+
+#: glade/dbg_cause-2.str:12
+msgid "byte read"
+msgstr ""
+
+#: glade/dbg_cause-2.str:13
+msgid "Mode:"
+msgstr ""
+
+#: glade/dbg_cause-2.str:14
+msgid "A breakpoint has been encountered..."
+msgstr ""
+
+#: glade/dbg_cause-2.str:15
+msgid "Target:"
+msgstr ""
+
+#: glade/dbg_cause-2.str:16
+msgid "0x4c00"
+msgstr ""
+
+#: glade/dbg_cause-2.str:17 glade/dbg_cause-2.str:27
+msgid "Id:"
+msgstr ""
+
+#: glade/dbg_cause-2.str:18 glade/dbg_cause-2.str:28
+msgid "#0"
+msgstr ""
+
+#: glade/dbg_cause-2.str:19
+msgid "Exception!"
+msgstr ""
+
+#: glade/dbg_cause-2.str:21
+msgid "PC (pushed):"
+msgstr ""
+
+#: glade/dbg_cause-2.str:22
+msgid "illegal instr"
+msgstr ""
+
+#: glade/dbg_cause-2.str:23 glade/dbg_mem-2.str:15
+msgid "000000"
+msgstr ""
+
+#: glade/dbg_cause-2.str:24
+msgid "0000"
+msgstr ""
+
+#: glade/dbg_cause-2.str:25
+msgid "SR (pushed):"
+msgstr ""
+
+#: glade/dbg_cause-2.str:26
+msgid "An exception has been encountered..."
+msgstr ""
+
+#: glade/dbg_code-2.str:7
+msgid "Disassembly"
+msgstr ""
+
+#: glade/dbg_code-2.str:8
+msgid "_Debug"
+msgstr ""
+
+#: glade/dbg_code-2.str:9
+msgid "_Run"
+msgstr ""
+
+#: glade/dbg_code-2.str:10
+msgid "Step into (single step)"
+msgstr ""
+
+#: glade/dbg_code-2.str:11
+msgid "Step _in"
+msgstr ""
+
+#: glade/dbg_code-2.str:12
+msgid "Step over (skip subroutine)"
+msgstr ""
+
+#: glade/dbg_code-2.str:13
+msgid "Step _over"
+msgstr ""
+
+#: glade/dbg_code-2.str:14
+msgid "Step out (return to caller)"
+msgstr ""
+
+#: glade/dbg_code-2.str:15
+msgid "Step ou_t"
+msgstr ""
+
+#: glade/dbg_code-2.str:16
+msgid "Run to _cursor"
+msgstr ""
+
+#: glade/dbg_code-2.str:17
+msgid "_Break"
+msgstr ""
+
+#: glade/dbg_code-2.str:18
+msgid "_Log"
+msgstr ""
+
+#: glade/dbg_code-2.str:19
+msgid "_Linkport"
+msgstr ""
+
+#: glade/dbg_code-2.str:20
+msgid "Windows"
+msgstr ""
+
+#: glade/dbg_code-2.str:21
+msgid "_Registers"
+msgstr ""
+
+#: glade/dbg_code-2.str:22
+msgid "_Breakpoints"
+msgstr ""
+
+#: glade/dbg_code-2.str:23
+msgid "_Memory"
+msgstr ""
+
+#: glade/dbg_code-2.str:24
+msgid "_PC trace"
+msgstr ""
+
+#: glade/dbg_code-2.str:25
+msgid "_Stack frame"
+msgstr ""
+
+#: glade/dbg_code-2.str:26
+msgid "_Heap (handles)"
+msgstr ""
+
+#: glade/dbg_code-2.str:27
+msgid "_I/O ports"
+msgstr ""
+
+#: glade/dbg_code-2.str:28
+msgid "Dock Mode"
+msgstr ""
+
+#: glade/dbg_code-2.str:29
+msgid "_Group windows"
+msgstr ""
+
+#: glade/dbg_code-2.str:30
+msgid "_Show all"
+msgstr ""
+
+#: glade/dbg_code-2.str:31
+msgid "_Hide all"
+msgstr ""
+
+#: glade/dbg_code-2.str:32
+msgid "M_inimize all"
+msgstr ""
+
+#: glade/dbg_code-2.str:33
+msgid "M_aximize all"
+msgstr ""
+
+#: glade/dbg_code-2.str:34
+msgid "_Restore all"
+msgstr ""
+
+#: glade/dbg_code-2.str:35
+msgid "_Quit"
+msgstr ""
+
+#: glade/dbg_code-2.str:36
+msgid "_Font"
+msgstr ""
+
+#: glade/dbg_code-2.str:37
+msgid "_State"
+msgstr ""
+
+#: glade/dbg_code-2.str:38
+msgid "S_ave"
+msgstr ""
+
+#: glade/dbg_code-2.str:39
+msgid "_Revert"
+msgstr ""
+
+#: glade/dbg_code-2.str:40
+msgid "Run (F5)"
+msgstr ""
+
+#: glade/dbg_code-2.str:41
+msgid "Single step / Step into (F7)"
+msgstr ""
+
+#: glade/dbg_code-2.str:42
+msgid "Step over (F8)"
+msgstr ""
+
+#: glade/dbg_code-2.str:43
+msgid "Step out (F9)"
+msgstr ""
+
+#: glade/dbg_code-2.str:44
+msgid "Run to cursor (F4)"
+msgstr ""
+
+#: glade/dbg_code-2.str:45
+msgid "Break (F11)"
+msgstr ""
+
+#: glade/dbg_code-2.str:46
+msgid "Toggle breakpoint (F2)"
+msgstr ""
+
+#: glade/dbg_code-2.str:47
+msgid "Cycle count:"
+msgstr ""
+
+#: glade/dbg_code-2.str:49
+msgid "00"
+msgstr ""
+
+#: glade/dbg_code-2.str:50
+msgid "Reset"
+msgstr ""
+
+#: glade/dbg_code-2.str:51
+msgid "Symbol:"
+msgstr ""
+
+#: glade/dbg_code-2.str:52
+msgid "by name"
+msgstr ""
+
+#: glade/dbg_code-2.str:53
+msgid "by addr"
+msgstr ""
+
+#: glade/dbg_code-2.str:54
+msgid "by id"
+msgstr ""
+
+#: glade/dbg_code-2.str:55 glade/dbg_mem-2.str:19
+msgid "Go to _address"
+msgstr ""
+
+#: glade/dbg_code-2.str:56
+msgid "Go to _PC"
+msgstr ""
+
+#: glade/dbg_code-2.str:57
+msgid "Set _breakpoint"
+msgstr ""
+
+#: glade/dbg_code-2.str:58
+msgid "Set _one shot bkpt"
+msgstr ""
+
+#: glade/dbg_code-2.str:59
+msgid "Set PC to _selection"
+msgstr ""
+
+#: glade/dbg_code-2.str:60 glade/dbg_heap-2.str:9 glade/dbg_mem-2.str:22
+#: glade/dbg_regs-2.str:10 glade/dbg_stack-2.str:12
+msgid "View _memory"
+msgstr ""
+
+#: glade/dbg_code-2.str:61
+msgid "Change font"
+msgstr ""
+
+#: glade/dbg_code-2.str:62 glade/device-2.str:18
+msgid "custom"
+msgstr ""
+
+#: glade/dbg_code-2.str:63
+msgid "default"
+msgstr ""
+
+#: glade/dbg_code-2.str:64
+msgid "Font:"
+msgstr ""
+
+#: glade/dbg_data-2.str:7
+msgid "Add Data Breakpoint"
+msgstr ""
+
+#: glade/dbg_data-2.str:8
+msgid "_Read"
+msgstr ""
+
+#: glade/dbg_data-2.str:9
+msgid "_Write"
+msgstr ""
+
+#: glade/dbg_data-2.str:10
+msgid "_Either"
+msgstr ""
+
+#: glade/dbg_data-2.str:12
+msgid "_Single"
+msgstr ""
+
+#: glade/dbg_data-2.str:13
+msgid "_Range"
+msgstr ""
+
+#: glade/dbg_data-2.str:14
+msgid "to"
+msgstr ""
+
+#: glade/dbg_data-2.str:15
+msgid "at"
+msgstr ""
+
+#: glade/dbg_data-2.str:19
+msgid "Byte"
+msgstr ""
+
+#: glade/dbg_data-2.str:20
+msgid "Word"
+msgstr ""
+
+#: glade/dbg_data-2.str:21
+msgid "Long"
+msgstr ""
+
+#: glade/dbg_entry-2.str:2
+msgid "Set program entry breakpoint"
+msgstr ""
+
+#: glade/dbg_heap-2.str:7
+msgid "Heap"
+msgstr ""
+
+#: glade/dbg_heap-2.str:8
+msgid ""
+"Double click rowl to open tab in the memory window at the handle address."
+msgstr ""
+
+#: glade/dbg_ioports-2.str:7 glade/dbg_regs-2.str:7 glade/dbg_regs-2.str:28
+msgid "Show registers"
+msgstr ""
+
+#: glade/dbg_ioports-2.str:8
+msgid "I/O ports"
+msgstr ""
+
+#: glade/dbg_ioports-2.str:9 glade/dbg_regs-2.str:9
+msgid "Double-click value or item to edit."
+msgstr ""
+
+#: glade/dbg_ioports-2.str:10
+msgid "_Hex"
+msgstr ""
+
+#: glade/dbg_ioports-2.str:11
+msgid "_Dec"
+msgstr ""
+
+#: glade/dbg_mem-2.str:7
+msgid "Memory"
+msgstr ""
+
+#: glade/dbg_mem-2.str:8
+msgid "Add tab (F1)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:9
+msgid "Remove tab (F2)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:10
+msgid "Up (F3)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:11
+msgid "Down (F4)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:12
+msgid "Refresh tab (F5)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:13
+msgid "View memory map (F6)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:14
+msgid "Enter Address"
+msgstr ""
+
+#: glade/dbg_mem-2.str:16
+msgid "HEX address"
+msgstr ""
+
+#: glade/dbg_mem-2.str:17
+msgid "Find"
+msgstr ""
+
+#: glade/dbg_mem-2.str:18
+msgid "Find _next"
+msgstr ""
+
+#: glade/dbg_mem-2.str:20
+msgid "_Dis-assemble"
+msgstr ""
+
+#: glade/dbg_mem-2.str:21
+msgid "Dis-assemble (indirect)"
+msgstr ""
+
+#: glade/dbg_mem-2.str:23
+msgid "Search"
+msgstr ""
+
+#: glade/dbg_mem-2.str:24
+msgid "Find _Next"
+msgstr ""
+
+#: glade/dbg_mem-2.str:25
+msgid "Find:"
+msgstr ""
+
+#: glade/dbg_mem-2.str:26
+msgid ""
+"Hexadecimal strings must have 2 chars per byte and can be with or without "
+"space: FE ED or FEED."
+msgstr ""
+
+#: glade/dbg_mem-2.str:27
+msgid "_ASCII"
+msgstr ""
+
+#: glade/dbg_mem-2.str:28
+msgid "_Case sensitive"
+msgstr ""
+
+#: glade/dbg_pclog-2.str:7
+msgid "PC trace"
+msgstr ""
+
+#: glade/dbg_pclog-2.str:8
+msgid "Double-click the row to disassemble."
+msgstr ""
+
+#: glade/dbg_regs-2.str:8 glade/dbg_regs-2.str:29
+msgid "Registers"
+msgstr ""
+
+#: glade/dbg_regs-2.str:11
+msgid "Status Register"
+msgstr ""
+
+#: glade/dbg_regs-2.str:12 glade/dbg_regs-2.str:72
+msgid "T"
+msgstr ""
+
+#: glade/dbg_regs-2.str:14 glade/dbg_regs-2.str:73
+msgid "S"
+msgstr ""
+
+#: glade/dbg_regs-2.str:17
+msgid "I2"
+msgstr ""
+
+#: glade/dbg_regs-2.str:18
+msgid "I1"
+msgstr ""
+
+#: glade/dbg_regs-2.str:22 glade/dbg_regs-2.str:74
+msgid "X"
+msgstr ""
+
+#: glade/dbg_regs-2.str:23 glade/dbg_regs-2.str:68
+msgid "N"
+msgstr ""
+
+#: glade/dbg_regs-2.str:24 glade/dbg_regs-2.str:69
+msgid "Z"
+msgstr ""
+
+#: glade/dbg_regs-2.str:25 glade/dbg_regs-2.str:70
+msgid "V"
+msgstr ""
+
+#: glade/dbg_regs-2.str:26 glade/dbg_regs-2.str:71
+msgid "C"
+msgstr ""
+
+#: glade/dbg_regs-2.str:27
+msgid "I0"
+msgstr ""
+
+#: glade/dbg_regs-2.str:30
+msgid "D1="
+msgstr ""
+
+#: glade/dbg_regs-2.str:31
+msgid "D2="
+msgstr ""
+
+#: glade/dbg_regs-2.str:32
+msgid "D3="
+msgstr ""
+
+#: glade/dbg_regs-2.str:33
+msgid "D4="
+msgstr ""
+
+#: glade/dbg_regs-2.str:34
+msgid "D5="
+msgstr ""
+
+#: glade/dbg_regs-2.str:35
+msgid "D6="
+msgstr ""
+
+#: glade/dbg_regs-2.str:36
+msgid "D7="
+msgstr ""
+
+#: glade/dbg_regs-2.str:37
+msgid "A0="
+msgstr ""
+
+#: glade/dbg_regs-2.str:38
+msgid "A1="
+msgstr ""
+
+#: glade/dbg_regs-2.str:39
+msgid "A2="
+msgstr ""
+
+#: glade/dbg_regs-2.str:40
+msgid "A3="
+msgstr ""
+
+#: glade/dbg_regs-2.str:41
+msgid "A4="
+msgstr ""
+
+#: glade/dbg_regs-2.str:42
+msgid "A5="
+msgstr ""
+
+#: glade/dbg_regs-2.str:43
+msgid "A6="
+msgstr ""
+
+#: glade/dbg_regs-2.str:44
+msgid "A7="
+msgstr ""
+
+#: glade/dbg_regs-2.str:45 glade/dbg_regs-2.str:46 glade/dbg_regs-2.str:47
+#: glade/dbg_regs-2.str:48 glade/dbg_regs-2.str:49 glade/dbg_regs-2.str:50
+#: glade/dbg_regs-2.str:51 glade/dbg_regs-2.str:52 glade/dbg_regs-2.str:53
+#: glade/dbg_regs-2.str:54 glade/dbg_regs-2.str:55 glade/dbg_regs-2.str:56
+#: glade/dbg_regs-2.str:57 glade/dbg_regs-2.str:58 glade/dbg_regs-2.str:59
+#: glade/dbg_regs-2.str:76
+msgid "12345678"
+msgstr ""
+
+#: glade/dbg_regs-2.str:60
+msgid "USP="
+msgstr ""
+
+#: glade/dbg_regs-2.str:61
+msgid "SSP="
+msgstr ""
+
+#: glade/dbg_regs-2.str:62
+msgid "PC="
+msgstr ""
+
+#: glade/dbg_regs-2.str:63
+msgid "SR="
+msgstr ""
+
+#: glade/dbg_regs-2.str:64 glade/dbg_regs-2.str:65 glade/dbg_regs-2.str:66
+msgid "123456"
+msgstr ""
+
+#: glade/dbg_regs-2.str:67
+msgid "1234"
+msgstr ""
+
+#: glade/dbg_regs-2.str:75
+msgid "I="
+msgstr ""
+
+#: glade/dbg_regs-2.str:77
+msgid "D0="
+msgstr ""
+
+#: glade/dbg_stack-2.str:7
+msgid "Stack"
+msgstr ""
+
+#: glade/dbg_stack-2.str:8
+msgid "A7 (stack) is:"
+msgstr ""
+
+#: glade/dbg_stack-2.str:9
+msgid "USP"
+msgstr ""
+
+#: glade/dbg_stack-2.str:10
+msgid "A7 (stack)"
+msgstr ""
+
+#: glade/dbg_stack-2.str:11
+msgid "A6 (frame)"
+msgstr ""
+
+#: glade/dbg_vectors-2.str:7
+msgid "Add Vector Breakpoint"
+msgstr ""
+
+#: glade/dboxes-2.str:7
+msgid "Title"
+msgstr ""
+
+#: glade/dboxes-2.str:8
+msgid "*"
+msgstr ""
+
+#: glade/dboxes-2.str:9
+msgid "Name:"
+msgstr ""
+
+#: glade/device-2.str:3
+msgid "Communication Settings"
+msgstr ""
+
+#: glade/device-2.str:4
+msgid "_Auto-detect"
+msgstr ""
+
+#: glade/device-2.str:5
+msgid "Cable:"
+msgstr ""
+
+#: glade/device-2.str:6
+msgid "Port:"
+msgstr ""
+
+#: glade/device-2.str:7
+msgid "Calc:"
+msgstr ""
+
+#: glade/device-2.str:8
+msgid "Timeout:"
+msgstr ""
+
+#: glade/device-2.str:9
+msgid "Delay:"
+msgstr ""
+
+#: glade/device-2.str:10
+msgid "GrayLink"
+msgstr ""
+
+#: glade/device-2.str:11
+msgid "BlackLink"
+msgstr ""
+
+#: glade/device-2.str:12
+msgid "SilverLink"
+msgstr ""
+
+#: glade/device-2.str:13
+msgid "ParallelLink"
+msgstr ""
+
+#: glade/device-2.str:14
+msgid "VTi"
+msgstr ""
+
+#: glade/device-2.str:16
+msgid "virtual"
+msgstr ""
+
+#: glade/device-2.str:17 glade/device-2.str:23
+msgid "null"
+msgstr ""
+
+#: glade/device-2.str:19
+msgid "#1"
+msgstr ""
+
+#: glade/device-2.str:20
+msgid "#2"
+msgstr ""
+
+#: glade/device-2.str:21
+msgid "#3"
+msgstr ""
+
+#: glade/device-2.str:22
+msgid "#4"
+msgstr ""
+
+#: glade/device-2.str:24
+msgid "TI73"
+msgstr ""
+
+#: glade/device-2.str:25
+msgid "TI82"
+msgstr ""
+
+#: glade/device-2.str:26
+msgid "TI83"
+msgstr ""
+
+#: glade/device-2.str:27
+msgid "TI83+"
+msgstr ""
+
+#: glade/device-2.str:28
+msgid "TI84+"
+msgstr ""
+
+#: glade/device-2.str:29
+msgid "TI85"
+msgstr ""
+
+#: glade/device-2.str:30
+msgid "TI86"
+msgstr ""
+
+#: glade/device-2.str:31
+msgid "TI89"
+msgstr ""
+
+#: glade/device-2.str:32
+msgid "TI89 Titanium"
+msgstr ""
+
+#: glade/device-2.str:33 glade/infos-2.str:18
+msgid "TI92"
+msgstr ""
+
+#: glade/device-2.str:34
+msgid "TI92+"
+msgstr ""
+
+#: glade/device-2.str:35
+msgid "V200PLT"
+msgstr ""
+
+#: glade/device-2.str:36
+msgid "Settings"
+msgstr ""
+
+#: glade/device-2.str:37
+msgid "Have a problem ? Check out the log:"
+msgstr ""
+
+#: glade/infos-2.str:7
+msgid "Infos..."
+msgstr ""
+
+#: glade/infos-2.str:8
+msgid "Skin version:"
+msgstr ""
+
+#: glade/infos-2.str:9
+msgid "Skin name:"
+msgstr ""
+
+#: glade/infos-2.str:10
+msgid "Skin author:"
+msgstr ""
+
+#: glade/infos-2.str:11
+msgid "Version:"
+msgstr ""
+
+#: glade/infos-2.str:12
+msgid "RAM size:"
+msgstr ""
+
+#: glade/infos-2.str:13
+msgid "ROM size:"
+msgstr ""
+
+#: glade/infos-2.str:14
+msgid "ROM type:"
+msgstr ""
+
+#: glade/infos-2.str:15
+msgid "VTi/TiEmu"
+msgstr ""
+
+#: glade/infos-2.str:16
+msgid "Default TI-92"
+msgstr ""
+
+#: glade/infos-2.str:17
+msgid "Julien Blache"
+msgstr ""
+
+#: glade/infos-2.str:19
+msgid "1.11"
+msgstr ""
+
+#: glade/infos-2.str:20
+msgid "128KB"
+msgstr ""
+
+#: glade/infos-2.str:21
+msgid "2MB"
+msgstr ""
+
+#: glade/infos-2.str:22
+msgid "external ROM"
+msgstr ""
+
+#: glade/infos-2.str:23
+msgid "Calc type:"
+msgstr ""
+
+#: glade/infos-2.str:24
+msgid "Hardware:"
+msgstr ""
+
+#: glade/infos-2.str:25
+msgid "HW1"
+msgstr ""
+
+#: glade/log_link-2.str:7
+msgid "Link Log"
+msgstr ""
+
+#: glade/log_link-2.str:8
+msgid "Save"
+msgstr ""
+
+#: glade/log_link-2.str:10
+msgid "Clear"
+msgstr ""
+
+#: glade/log_link-2.str:11
+msgid "Close"
+msgstr ""
+
+#: glade/log_link-2.str:12
+msgid "_Send"
+msgstr ""
+
+#: glade/log_link-2.str:13
+msgid "_Receive"
+msgstr ""
+
+#: glade/log_link-2.str:14
+msgid "Buffer size: "
+msgstr ""
+
+#: glade/log_link-2.str:15
+msgid "KB"
+msgstr ""
+
+#: glade/pbars-2.str:7
+msgid "Title 1"
+msgstr ""
+
+#: glade/pbars-2.str:8
+msgid "Transfer status:"
+msgstr ""
+
+#: glade/pbars-2.str:9
+msgid "Rate: 0.00 Kb/s"
+msgstr ""
+
+#: glade/pbars-2.str:10
+msgid "Title 2"
+msgstr ""
+
+#: glade/pbars-2.str:11
+msgid "Message."
+msgstr ""
+
+#: glade/pbars-2.str:12
+msgid "Title 3"
+msgstr ""
+
+#: glade/pbars-2.str:13 glade/pbars-2.str:22
+msgid "Total transfer:"
+msgstr ""
+
+#: glade/pbars-2.str:14 glade/pbars-2.str:17 glade/pbars-2.str:23
+msgid "Current transfer:"
+msgstr ""
+
+#: glade/pbars-2.str:15 glade/pbars-2.str:20 glade/pbars-2.str:26
+msgid "Rate: 0.0 Kbytes/s"
+msgstr ""
+
+#: glade/pbars-2.str:16
+msgid "Title 4"
+msgstr ""
+
+#: glade/pbars-2.str:18 glade/pbars-2.str:24
+msgid "1/1: "
+msgstr ""
+
+#: glade/pbars-2.str:19 glade/pbars-2.str:25
+msgid "Text"
+msgstr ""
+
+#: glade/pbars-2.str:21
+msgid "Title 5"
+msgstr ""
+
+#: glade/popup-2.str:7
+msgid "Welcome to TiEmu 3"
+msgstr ""
+
+#: glade/popup-2.str:8
+msgid "TiEmu Menu"
+msgstr ""
+
+#: glade/popup-2.str:9
+msgid ""
+"Send the selected file to the emulator. This file can be of any type "
+"(single, group, backup, FLASH app or FLASH OS)."
+msgstr ""
+
+#: glade/popup-2.str:10
+msgid "_Send file to TiEmu..."
+msgstr ""
+
+#: glade/popup-2.str:11
+msgid "_Debug file with TiEmu..."
+msgstr ""
+
+#: glade/popup-2.str:12
+msgid "_Link"
+msgstr ""
+
+#: glade/popup-2.str:13
+msgid "Do the link cable setup."
+msgstr ""
+
+#: glade/popup-2.str:14
+msgid "_Settings..."
+msgstr ""
+
+#: glade/popup-2.str:15
+msgid "_Quick-send..."
+msgstr ""
+
+#: glade/popup-2.str:16
+msgid ""
+"Listen for files sent from TiEmu. Uncheck it if you are running program "
+"which use the linkport for sound."
+msgstr ""
+
+#: glade/popup-2.str:17
+msgid "_Listen for files"
+msgstr ""
+
+#: glade/popup-2.str:18
+msgid "_Emulate sound"
+msgstr ""
+
+#: glade/popup-2.str:19
+msgid "Configuration"
+msgstr ""
+
+#: glade/popup-2.str:20
+msgid "Save the actual configuration into a text file."
+msgstr ""
+
+#: glade/popup-2.str:21
+msgid "_Save config..."
+msgstr ""
+
+#: glade/popup-2.str:22
+msgid "Load the configuration previously saved."
+msgstr ""
+
+#: glade/popup-2.str:23
+msgid "_Load config..."
+msgstr ""
+
+#: glade/popup-2.str:24
+msgid "Calculator state"
+msgstr ""
+
+#: glade/popup-2.str:25
+msgid "Reload the previously saved state."
+msgstr ""
+
+#: glade/popup-2.str:26
+msgid "_Revert to saved state"
+msgstr ""
+
+#: glade/popup-2.str:27
+msgid "Load the calculator state from file."
+msgstr ""
+
+#: glade/popup-2.str:28
+msgid "_Load state image..."
+msgstr ""
+
+#: glade/popup-2.str:29
+msgid "Save the calculator state into a file (called state image)."
+msgstr ""
+
+#: glade/popup-2.str:30
+msgid "_Save state image..."
+msgstr ""
+
+#: glade/popup-2.str:31
+msgid "Do a 'save state image' and exits."
+msgstr ""
+
+#: glade/popup-2.str:32
+msgid "_Exit and save state"
+msgstr ""
+
+#: glade/popup-2.str:33
+msgid "Go into the debugger."
+msgstr ""
+
+#: glade/popup-2.str:34
+msgid "_Enter debugger..."
+msgstr ""
+
+#: glade/popup-2.str:35
+msgid "Reset the calculator."
+msgstr ""
+
+#: glade/popup-2.str:36
+msgid "_Reset calc"
+msgstr ""
+
+#: glade/popup-2.str:37
+msgid "Load a FLASH upgrade into the FLASH memory of the calculator."
+msgstr ""
+
+#: glade/popup-2.str:38
+msgid "_Upgrade calc"
+msgstr ""
+
+#: glade/popup-2.str:39
+msgid "Import and/or set an image to emulate."
+msgstr ""
+
+#: glade/popup-2.str:40
+msgid "Set R_OM (image/upgrade)"
+msgstr ""
+
+#: glade/popup-2.str:41
+msgid "Emulator options"
+msgstr ""
+
+#: glade/popup-2.str:42
+msgid ""
+"Run the calculator at its default speed (default) or at the maximum the "
+"computer can do."
+msgstr ""
+
+#: glade/popup-2.str:43
+msgid "_Restrict to actual speed"
+msgstr ""
+
+#: glade/popup-2.str:44
+msgid ""
+"Enable/disable hardware protection. Please note you will have to restart the "
+"emulator or select an image for changes to take effect."
+msgstr ""
+
+#: glade/popup-2.str:45
+msgid "H_W protection"
+msgstr ""
+
+#: glade/popup-2.str:46
+msgid "_High LCD update"
+msgstr ""
+
+#: glade/popup-2.str:47
+msgid "_Med LCD update"
+msgstr ""
+
+#: glade/popup-2.str:48
+msgid "L_ow LCD update"
+msgstr ""
+
+#: glade/popup-2.str:49
+msgid "_Normal view (x1)"
+msgstr ""
+
+#: glade/popup-2.str:50
+msgid "_Large view (x2)"
+msgstr ""
+
+#: glade/popup-2.str:51
+msgid "_Full screen"
+msgstr ""
+
+#: glade/popup-2.str:52
+msgid "_Custom view"
+msgstr ""
+
+#: glade/popup-2.str:53
+msgid "Skin for current calc"
+msgstr ""
+
+#: glade/popup-2.str:54
+msgid "No skin (just LCD)."
+msgstr ""
+
+#: glade/popup-2.str:55
+msgid "_None"
+msgstr ""
+
+#: glade/popup-2.str:56
+msgid "Returns to default skin."
+msgstr ""
+
+#: glade/popup-2.str:57
+msgid "_Default"
+msgstr ""
+
+#: glade/popup-2.str:58
+msgid "Choose a skin to use."
+msgstr ""
+
+#: glade/popup-2.str:59
+msgid "_Other..."
+msgstr ""
+
+#: glade/popup-2.str:60
+msgid "Screenshot"
+msgstr ""
+
+#: glade/popup-2.str:61
+msgid "Do a screenshot now!"
+msgstr ""
+
+#: glade/popup-2.str:62
+msgid "_Now!"
+msgstr ""
+
+#: glade/popup-2.str:63
+msgid "Set options for screenshot (image, type)."
+msgstr ""
+
+#: glade/popup-2.str:64
+msgid "_Options"
+msgstr ""
+
+#: glade/popup-2.str:65
+msgid "_Copy to clipboard"
+msgstr ""
+
+#: glade/popup-2.str:66
+msgid "Key Press"
+msgstr ""
+
+#: glade/popup-2.str:67
+msgid "Setup recording"
+msgstr ""
+
+#: glade/popup-2.str:68
+msgid "Record"
+msgstr ""
+
+#: glade/popup-2.str:69
+msgid "Setup playing"
+msgstr ""
+
+#: glade/popup-2.str:70
+msgid "Play"
+msgstr ""
+
+#: glade/popup-2.str:71
+msgid "Misc"
+msgstr ""
+
+#: glade/popup-2.str:72
+msgid "Open the TiEmu user's manual in a browser."
+msgstr ""
+
+#: glade/popup-2.str:73
+msgid "_User's Manual"
+msgstr ""
+
+#: glade/popup-2.str:74
+msgid "Open the Linux manpage (applicable to Windows, too)."
+msgstr ""
+
+#: glade/popup-2.str:75
+msgid "_Manpage"
+msgstr ""
+
+#: glade/popup-2.str:76
+msgid "_Bookmarks"
+msgstr ""
+
+#: glade/popup-2.str:77
+msgid "http://lpg.ticalc.org/prj_tiemu"
+msgstr ""
+
+#: glade/popup-2.str:79
+msgid "http://tigcc.ticalc.org"
+msgstr ""
+
+#: glade/popup-2.str:80
+msgid "TIGCC"
+msgstr ""
+
+#: glade/popup-2.str:81
+msgid "http://www.tilp.info"
+msgstr ""
+
+#: glade/popup-2.str:82
+msgid "TiLP"
+msgstr ""
+
+#: glade/popup-2.str:83
+msgid "http://education.ti.com"
+msgstr ""
+
+#: glade/popup-2.str:84
+msgid "TI Education"
+msgstr ""
+
+#: glade/popup-2.str:85
+msgid "http://www.ticalc.org"
+msgstr ""
+
+#: glade/popup-2.str:86
+msgid "ticalc.org"
+msgstr ""
+
+#: glade/popup-2.str:87
+msgid "How to report a bug or a problem."
+msgstr ""
+
+#: glade/popup-2.str:88
+msgid "Bu_g report"
+msgstr ""
+
+#: glade/popup-2.str:89
+msgid "Display the log of all changes."
+msgstr ""
+
+#: glade/popup-2.str:90
+msgid "_ChangeLog"
+msgstr ""
+
+#: glade/popup-2.str:91
+msgid "About TiEmu..."
+msgstr ""
+
+#: glade/popup-2.str:92
+msgid "_About..."
+msgstr ""
+
+#: glade/popup-2.str:93
+msgid "_Infos..."
+msgstr ""
+
+#: glade/popup-2.str:94
+msgid "Just exits."
+msgstr ""
+
+#: glade/popup-2.str:95
+msgid "E_xit without saving state"
+msgstr ""
+
+#: glade/quicksend-2.str:7
+msgid "Quick send"
+msgstr ""
+
+#: glade/quicksend-2.str:8
+msgid "_enable"
+msgstr ""
+
+#: glade/romversion-2.str:7
+msgid "Set ROM version"
+msgstr ""
+
+#: glade/scroptions-2.str:7
+msgid "Screen Options"
+msgstr ""
+
+#: glade/scroptions-2.str:8
+msgid "_JPEG"
+msgstr ""
+
+#: glade/scroptions-2.str:9
+msgid "_PNG"
+msgstr ""
+
+#: glade/scroptions-2.str:10
+msgid "_ICO"
+msgstr ""
+
+#: glade/scroptions-2.str:11
+msgid "_EPS"
+msgstr ""
+
+#: glade/scroptions-2.str:12
+msgid "PD_F"
+msgstr ""
+
+#: glade/scroptions-2.str:13
+msgid "_BMP"
+msgstr ""
+
+#: glade/scroptions-2.str:14
+msgid "Image format:"
+msgstr ""
+
+#: glade/scroptions-2.str:15
+msgid "Skips: "
+msgstr ""
+
+#: glade/scroptions-2.str:16
+msgid "Number of frames to capture"
+msgstr ""
+
+#: glade/scroptions-2.str:17
+msgid ""
+"Number of frames to skip between 2 captures. Beware: if you want to capture "
+"image every 4 frames, you need to set value to 3."
+msgstr ""
+
+#: glade/scroptions-2.str:18
+msgid "Shots: "
+msgstr ""
+
+#: glade/scroptions-2.str:19
+msgid "Burst capture:"
+msgstr ""
+
+#: glade/scroptions-2.str:20
+msgid "Select folder"
+msgstr ""
+
+#: glade/scroptions-2.str:21
+msgid "screenshot"
+msgstr ""
+
+#: glade/scroptions-2.str:22
+msgid "-000.jpg"
+msgstr ""
+
+#: glade/scroptions-2.str:23
+msgid "Folder & Filename:"
+msgstr ""
+
+#: glade/scroptions-2.str:24
+msgid "Black&_White"
+msgstr ""
+
+#: glade/scroptions-2.str:25
+msgid "Colo_r"
+msgstr ""
+
+#: glade/scroptions-2.str:26
+msgid "_LCD only"
+msgstr ""
+
+#: glade/scroptions-2.str:27
+msgid "_Calculator"
+msgstr ""
+
+#: glade/scroptions-2.str:28
+msgid "Image type:"
+msgstr ""
+
+#: glade/wizard-2.str:7 glade/wizard-2.str:17 glade/wizard-2.str:25
+#: glade/wizard-2.str:27
+msgid "TiEmu wizard"
+msgstr ""
+
+#: glade/wizard-2.str:8
+msgid "Welcome to TiEmu 3, the Linux/Win32 TI emulator."
+msgstr ""
+
+#: glade/wizard-2.str:9
+msgid ""
+"I want to use PedRom (GPL'ed replacement OS) \n"
+"shipped with TiEmu."
+msgstr ""
+
+#: glade/wizard-2.str:11
+msgid ""
+"You have downloaded a FLASH upgrade on the TI\n"
+"website."
+msgstr ""
+
+#: glade/wizard-2.str:13
+msgid "You already have a ROM dump."
+msgstr ""
+
+#: glade/wizard-2.str:14
+msgid ""
+"You want to use TiLP or another dumping program \n"
+"to get a ROM dump of your calculator ROM."
+msgstr ""
+
+#: glade/wizard-2.str:16
+msgid ""
+"Remind you that you can not distribute your ROM dump(s). They are "
+"copyrighted by Texas Instruments."
+msgstr ""
+
+#: glade/wizard-2.str:18
+msgid ""
+"TiEmu is now set  up and ready for use. Some tips on how to use the emulator:"
+msgstr ""
+
+#: glade/wizard-2.str:19
+msgid ""
+"* You have access to a popup menu by right-clicking in the emulator's window."
+msgstr ""
+
+#: glade/wizard-2.str:20
+msgid "* To use keys, use mouse or keyboard"
+msgstr ""
+
+#: glade/wizard-2.str:21
+msgid ""
+"* To change to a different calculator or ROM version, use an item of the ROM "
+"menu."
+msgstr ""
+
+#: glade/wizard-2.str:22
+msgid "* You can save the emulator state and config."
+msgstr ""
+
+#: glade/wizard-2.str:23
+msgid ""
+"* If your calculator screen is blank, use 'Ctrl' with '+/-' for adjusting "
+"contrast."
+msgstr ""
+
+#: glade/wizard-2.str:24
+msgid "Click the 'Finish' button to start TiEmu."
+msgstr ""
+
+#: glade/wizard-2.str:26
+msgid ""
+"If you want to get a ROM dump with TiLP, you will have to download it from: "
+"<http://tilp.info>Be sure to read the user's manual!"
+msgstr ""
+
+#: glade/wizard-2.str:28
+msgid ""
+"The FLASH upgrade you have selected is being to be converted into a TiEmu "
+"image. Please wait..."
+msgstr ""
+
+#: glade/wizard-2.str:29
+msgid "Note also that the converted image will not have a boot block."
+msgstr ""
