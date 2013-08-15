@@ -1,0 +1,121 @@
+This package was debianized by Julien BLACHE <jblache@debian.org> on
+Mon, 14 Feb 2000 14:55:57 +0100.
+
+It was downloaded from <http://lpg.ticalc.org/prj_tiemu/>
+
+Upstream Authors:
+
+    Romain Liévin <roms@tilp.info>
+    Julien Blache <jb@jblache.org>
+    Kevin Kofler <kevin.kofler@chello.at>
+    Christian Walther <cwalther@gmx.ch>
+    Jaime Fernando Meza Meza <jaimezacalcs@yahoo.com>
+
+Copyright:
+
+    Copyright © 1991 the Massachusetts Institute of Technology
+    Copyright © 1995-1996 Ed Hanway
+    Copyright © 1995-1997, 2000-2006 Ulrich Drepper
+    Copyright © 1995-2001 Bernd Schmidt
+    Copyright © 1995-2008 Bernd Schmidt, and others
+    Copyright © 1996 Herman ten Brugge
+    Copyright © 1996-1998 David Ellsworth
+    Copyright © 1999 Paul Kuliniewicz
+    Copyright © 1999-2007 the TiEmu Team
+    Copyright © 1999-2009 Romain Liévin
+    Copyright © 2000-2001 Thomas Corvazier
+    Copyright © 2002-2004 Sebastian Reichelt
+    Copyright © 2003-2005 Jaroslaw Staniek
+    Copyright © 2003-2005 Julien Blache
+    Copyright © 2003-2007 Kevin Kofler
+    Copyright © 2004 Scott James Remnant
+    Copyright © 2005 Christian Ehrlicher
+    Copyright © 2005 Christian Walther
+    Copyright © 2006 Asger Ottar Alstrup
+    Copyright © 2006 Ralf Habacker
+    Copyright © 2006-2007 Tyler Cassidy
+    Copyright © 2007 Peter Fernandes
+    Copyright © Edwin van Rijkom
+    Copyright © Nicolas Cannasse
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+TiEmu uses software from various parts:
+
+ - XTiger:
+
+    Original author of (X)tiger: Jonas Minnberg
+    Homepage for Tiger: http://www.nada.kth.se/~md94-jmi/tiger/
+    License: GPL
+
+ - UAE:
+
+    UAE Amiga Emulator
+    Copyright © 1995-2008 Bernd Schmidt, and others.
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+ - PedroM:
+
+    PedroM      - Copyright © 2003, 2004, 2005 Patrick Pelissier
+    PreOS       - Copyright © 2002, 2003, 2004, 2005 Patrick Pelissier
+    Side        - Copyright © 2002, 2005 Clement Vasseur
+    MD5         - Copyright © 1999, 2000, 2002 Aladdin Enterprises
+    ExtGraph    - Copyright © 2001-2002 Thomas Nussbaumer
+    TIB Install - Copyright © 2000-2004 Julien Muchembled
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+
+    The precompiled TIB is PedRom re-built by Kevin in order to remove
+    non-free parts:
+
+    This is a version of PedroM 0.81 modified for compatibility with ld-tigcc.
+    I also deleted the non-Free files (the builtin ttunpack, the builtin stdlib
+    archive pack and wti.h (not used by PedroM anymore anyway) have been removed),
+    as well as several other junk not needed to build PedroM and built PedroM
+    using the fully GPL option. See pedrom-081-ld-tigcc.diff for my changes.
+
+    Fully-GPL version by Kevin Kofler:
+        <www.tigen.org/kevin.kofler/ti89prog/pedrom-ld-tigcc.zip>
+
+On Debian systems, a verbatim uncompressed copy of the GPL-2 is
+available as /usr/share/common-licenses/GPL-2.

@@ -1,0 +1,2 @@
+?package(tiemu):needs="X11" section="Applications/Science/Mathematics" \
+  title="TIemu" command="/usr/bin/tiemu"

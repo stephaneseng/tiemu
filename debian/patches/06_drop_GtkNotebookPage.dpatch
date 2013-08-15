@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 06_drop_GtkNotebookPage.dpatch by  <scott@kitterman.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Replace deprecated function with gpointer to fix FTBFS.
+
+@DPATCH@
+diff -urNad '--exclude=CVS' '--exclude=.svn' '--exclude=.git' '--exclude=.arch' '--exclude=.hg' '--exclude=_darcs' '--exclude=.bzr' tiemu-3.02~/src/gui/debugger/dbg_mem.c tiemu-3.02/src/gui/debugger/dbg_mem.c
+--- tiemu-3.02~/src/gui/debugger/dbg_mem.c	2010-10-17 14:32:16.000000000 -0400
++++ tiemu-3.02/src/gui/debugger/dbg_mem.c	2010-10-17 14:33:27.000000000 -0400
+@@ -593,7 +593,7 @@
+ 
+ GLADE_CB void
+ on_notebook1_switch_page               (GtkNotebook     *notebook,
+-                                        GtkNotebookPage *page,
++                                        gpointer        *page,
+                                         guint            page_num,
+                                         gpointer         user_data)
+ {

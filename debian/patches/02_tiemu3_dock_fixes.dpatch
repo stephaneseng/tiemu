@@ -1,0 +1,65 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 02_tiemu3_dock_fixes.dpatch by Krzysztof Burghardt <krzysztof@burghardt.pl>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: fixes problems with debugging in dock mode and dock window
+## DP: enabling/disabling; patch taken from upstream.
+
+@DPATCH@
+diff -urNad tiemu-3.02~/ChangeLog tiemu-3.02/ChangeLog
+--- tiemu-3.02~/ChangeLog	2007-12-31 00:15:51.000000000 +0100
++++ tiemu-3.02/ChangeLog	2009-08-09 23:19:36.104542592 +0200
+@@ -1,5 +1,9 @@
+ SubVersion: $Id: ChangeLog 2754 2007-12-30 23:15:51Z kevinkofler $
+ 
++- 12/02/2008, version 3.03:
++	- [kevin] $2765: fixed crash when debugging TIGCC program with GDB with low-level debugger in dock mode
++	- [kevin] $2766: fixed dock window enabling/disabling not to keep the engine running across the restart
++
+ - 16/09/2007, version 3.02:
+ 	- [roms]  $2646: screenshots can be copied into the clipboard
+ 	- [roms]  $2649: use fixed fonts for release and manpage dboxes
+diff -urNad tiemu-3.02~/src/gui/debugger/dbg_all.c tiemu-3.02/src/gui/debugger/dbg_all.c
+--- tiemu-3.02~/src/gui/debugger/dbg_all.c	2007-12-14 22:03:03.000000000 +0100
++++ tiemu-3.02/src/gui/debugger/dbg_all.c	2009-08-09 23:19:36.104542592 +0200
+@@ -7,7 +7,7 @@
+  *  Copyright (c) 2001-2003, Romain Lievin
+  *  Copyright (c) 2003, Julien Blache
+  *  Copyright (c) 2004, Romain Liévin
+- *  Copyright (c) 2005-2007, Romain Liévin, Kevin Kofler
++ *  Copyright (c) 2005-2008, Romain Liévin, Kevin Kofler
+  *
+  *  This program is free software; you can redistribute it and/or modify
+  *  it under the terms of the GNU General Public License as published by
+@@ -164,7 +164,7 @@
+ 
+ 			ti68k_bkpt_get_pgmentry_offset(id, &handle, &offset);
+ 			ti68k_bkpt_del_pgmentry(handle);
+-			if(GTK_WIDGET_VISIBLE(dbgw.bkpts))
++			if(options3.dbg_dock || GTK_WIDGET_VISIBLE(dbgw.bkpts))
+ 				dbgbkpts_refresh_window();
+ 
+ 			delete_command(NULL, 0);
+diff -urNad tiemu-3.02~/src/gui/debugger/dbg_wnds.c tiemu-3.02/src/gui/debugger/dbg_wnds.c
+--- tiemu-3.02~/src/gui/debugger/dbg_wnds.c	2007-12-15 23:29:44.000000000 +0100
++++ tiemu-3.02/src/gui/debugger/dbg_wnds.c	2009-08-09 23:19:36.100541655 +0200
+@@ -7,7 +7,7 @@
+  *  Copyright (c) 2001-2003, Romain Lievin
+  *  Copyright (c) 2003, Julien Blache
+  *  Copyright (c) 2004, Romain Liévin
+- *  Copyright (c) 2005-2007, Romain Liévin, Kevin Kofler
++ *  Copyright (c) 2005-2008, Romain Liévin, Kevin Kofler
+  *
+  *  This program is free software; you can redistribute it and/or modify
+  *  it under the terms of the GNU General Public License as published by
+@@ -265,6 +265,10 @@
+ 	engine_start();
+ #endif
+ 	gtk_debugger_close();
++	// Stop the engine before calling gtk_main_quit.
++	// Otherwise, it will keep running even when it is supposed to have
++	// been stopped by the debugger.
++	engine_stop();
+ 	if(options3.dbg_dock)
+ 		gtk_widget_destroy(dbgw.dock);
+ 
