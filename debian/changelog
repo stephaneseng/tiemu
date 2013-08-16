@@ -1,18 +1,18 @@
-tiemu (3.03-nogdb+dfsg-1) UNRELEASED; urgency=low
+tiemu (3.03-nogdb+dfsg-1) unstable; urgency=low
 
   * Team maintained in Debian-Science now (closes: #678861).
     Modifications in cooperation with Albert Huang
     <alberth.debian@gmail.com>, thanks!
   * New upstream release.
   * Switch packaging format to 3.0 (quilt), Standards-Version to 3.9.4
-    and debhelper to 9 (closes #661033).  Thanks to Jari Aalto
+    and debhelper to 9 (closes: #661033).  Thanks to Jari Aalto
     <jari.aalto@cante.net>.
   * Update patches, and:
     - Remove 02_tiemu3_dock_fixes.dpatch, fixed upstream.
     - Remove 03_memset_include_cstring.dpatch, fixed upstream.
     - Remove 05_remove_vlc_cable.dpatch, fixed upstream.
 
- -- Andreas B. Mundt <andi@debian.org>  Mon, 12 Aug 2013 09:37:30 +0200
+ -- Andreas B. Mundt <andi@debian.org>  Fri, 16 Aug 2013 10:41:18 +0200
 
 tiemu (3.02-1.2) unstable; urgency=low
 
