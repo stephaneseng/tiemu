@@ -7,6 +7,7 @@ Build-Depends: autotools-dev,
                debhelper (>= 9.0.0),
                gettext,
                groff-base,
+               libarchive-dev,
                libdbus-glib-1-dev,
                libglade2-dev,
                libgtk2.0-dev,
@@ -17,7 +18,7 @@ Build-Depends: autotools-dev,
                libtifiles-dev (>= 1.1.6),
                texinfo,
                zlib1g-dev
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: http://lpg.ticalc.org/prj_tiemu/
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/tiemu.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/tiemu.git

@@ -1,3 +1,11 @@
+tiemu (3.03-nogdb+dfsg-3) unstable; urgency=medium
+
+  * Fix FTBFS on amd64: Add libarchive-dev to build-depends.
+    (Closes: #746086). Thanks to HIGUCHI Daisuke <dai@debian.org>.
+  * Bump Standards-Version to 3.9.5 (no changes needed).
+
+ -- Andreas B. Mundt <andi@debian.org>  Fri, 30 May 2014 22:12:45 +0200
+
 tiemu (3.03-nogdb+dfsg-2) unstable; urgency=low
 
   * Fix debian/watch.  Cleanup.
