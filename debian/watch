@@ -1,4 +1,4 @@
 version=3
 opts=dversionmangle=s/\+dfsg$// \
-http://sf.net/gtktiemu/tiemu-(.+)\.tar\.gz \
+http://sf.net/gtktiemu/ .*/tiemu-(.+)\.tar\.gz \
 debian /bin/sh debian/get-orig-source.sh
