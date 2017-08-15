@@ -20,8 +20,8 @@ Build-Depends: autotools-dev,
                zlib1g-dev
 Standards-Version: 4.0.0
 Homepage: http://lpg.ticalc.org/prj_tiemu/
-Vcs-Git: git://anonscm.debian.org/debian-science/packages/tiemu.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/tiemu.git
+Vcs-Git: https://anonscm.debian.org/git/debian-science/packages/tiemu.git
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/tiemu.git
 
 Package: tiemu
 Architecture: any
