@@ -18,7 +18,7 @@ Build-Depends: autotools-dev,
                libtifiles-dev (>= 1.1.6),
                texinfo,
                zlib1g-dev
-Standards-Version: 3.9.5
+Standards-Version: 4.0.0
 Homepage: http://lpg.ticalc.org/prj_tiemu/
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/tiemu.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/tiemu.git
