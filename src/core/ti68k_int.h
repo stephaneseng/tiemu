@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: ti68k_int.h 2433 2007-04-13 19:03:45Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

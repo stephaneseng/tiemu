@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: screenshot.h 2190 2006-08-03 15:29:55Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *  Copyright (c) 2000-2001, Thomas Corvazier, Romain Lievin

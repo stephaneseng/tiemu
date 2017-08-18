@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: images.h 2821 2009-05-04 20:06:12Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

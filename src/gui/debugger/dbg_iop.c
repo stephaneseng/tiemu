@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dbg_iop.c 2818 2009-05-02 19:46:04Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -28,12 +28,17 @@
 #  include <config.h>
 #endif
 
-#include <gtk/gtk.h>
-#include <glade/glade.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <ctype.h>
+#include <gtk/gtk.h>
+#include <glade/glade.h>
+
+#if GTK_CHECK_VERSION(2,18,0)
+#undef GTK_WIDGET_VISIBLE
+#define GTK_WIDGET_VISIBLE(wid) (gtk_widget_get_visible(wid))
+#endif
 
 #include "intl.h"
 #include "paths.h"

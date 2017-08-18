@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: hw.c 2749 2007-12-30 17:55:13Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

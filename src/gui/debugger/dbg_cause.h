@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dbg_cause.h 2713 2007-12-14 21:03:03Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

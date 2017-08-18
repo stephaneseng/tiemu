@@ -10,7 +10,7 @@
   * it's actually needed by the .c file.
   *
   * Copyright 1996, 1997 Bernd Schmidt
-  * $Id: sysdeps.h 2556 2007-06-24 05:05:05Z kevinkofler $
+  * $Id$
   */
 
 #ifdef _MSC_VER

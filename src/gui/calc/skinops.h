@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: skinops.h 2031 2006-03-25 14:47:33Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *  Copyright (c) 2000-2001, Thomas Corvazier, Romain Lievin

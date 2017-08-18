@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: romversion.c 2753 2007-12-30 23:14:15Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

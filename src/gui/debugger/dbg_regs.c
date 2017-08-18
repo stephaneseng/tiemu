@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dbg_regs.c 2825 2009-05-06 19:48:47Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -28,13 +28,18 @@
 #  include <config.h>
 #endif
 
-#include <gtk/gtk.h>
-#include <glade/glade.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
 #include <ctype.h>
+#include <gtk/gtk.h>
+#include <glade/glade.h>
 #include <gdk/gdkkeysyms.h>
+
+#if GTK_CHECK_VERSION(2,18,0)
+#undef GTK_WIDGET_VISIBLE
+#define GTK_WIDGET_VISIBLE(wid) (gtk_widget_get_visible(wid))
+#endif
 
 #include "intl.h"
 #include "paths.h"
@@ -504,6 +509,8 @@ on_dbgregs_button_press_event          (GtkWidget       *widget,
 			text = gtk_entry_get_text(GTK_ENTRY(wregs.usp));
 		else if(!strcmp(label, "SSP="))
 			text = gtk_entry_get_text(GTK_ENTRY(wregs.ssp));
+		else
+			text = (char *)"";
 
         sscanf(text, "%x", &value);
 
@@ -547,7 +554,7 @@ GLADE_CB void
 on_go_to_address4_activate             (GtkMenuItem     *menuitem,
                                         gpointer         user_data)
 {
-    if(value == -1)
+    if(value == -1U)
         return;
     
     dbgmem_add_tab(value);

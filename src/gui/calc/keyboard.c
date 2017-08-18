@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: keyboard.c 2681 2007-11-20 18:01:02Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -51,11 +51,9 @@
 Pc2TiKey*       kbd_keymap = keymap;
 const char*     skn_keymap;
 
-extern SKIN_INFOS skin_infos;
-
 static int hwkey_to_tikey(guint16 hardware_keycode, int action)
 {
-    int i;		
+    int i;
 
     for(i = 0; i < KEYMAP_MAX; i++)
     {
@@ -248,7 +246,7 @@ on_calc_wnd_key_press_event        (GtkWidget       *widget,
 	printf(" group:		%u\n", event->group);
 #endif
 
-	if(event->keyval == GDK_Pause || (event->keyval == 0xffffff) && (event->hardware_keycode == 0x13))
+	if(event->keyval == GDK_Pause || ((event->keyval == 0xffffff) && (event->hardware_keycode == 0x13)))
 	{
         on_now1_activate(NULL, NULL);
         return TRUE;

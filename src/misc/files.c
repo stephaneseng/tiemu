@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: files.c 2385 2007-03-12 21:04:20Z roms $ */
+/* $Id$ */
 
 /*  TiLP - Ti Linking Program
  *  Copyright (C) 1999-2005  Romain Lievin

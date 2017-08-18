@@ -37,10 +37,15 @@
 #  include <config.h>
 #endif
 
+#include <string.h>
 #include <gtk/gtk.h>
 #include <glade/glade.h>
 #include <gdk/gdkkeysyms.h>
-#include <string.h>
+
+#if GTK_CHECK_VERSION(2,18,0)
+#undef GTK_WIDGET_VISIBLE
+#define GTK_WIDGET_VISIBLE(wid) (gtk_widget_get_visible(wid))
+#endif
 
 #include "intl.h"
 #include "paths.h"
@@ -65,10 +70,10 @@ static void gtk_widget_reparent_(GtkWidget* dst, GtkWidget* src)
 #if 1
 	gtk_widget_reparent(child, dst);
 #else
-	gtk_widget_ref(child);
-    gtk_container_remove(GTK_CONTAINER(src), child);
-    gtk_container_add(GTK_CONTAINER(dst), child);
-    gtk_widget_unref(child);
+	g_object_ref(child);
+	gtk_container_remove(GTK_CONTAINER(src), child);
+	gtk_container_add(GTK_CONTAINER(dst), child);
+	g_object_unref(child);
 #endif
 }
 

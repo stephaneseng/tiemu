@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: refresh.c 2349 2007-02-09 11:21:47Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
