@@ -1,20 +1,11 @@
 Description: Fix FTBFS with format-security warning/error.
  Cf. README
 Author: Andreas B. Mundt <andi@debian.org>
-Last-Update: 2013-08-15
+Last-Update: 2017-08-18
 
 --- a/src/gui/calc/popup.c
 +++ b/src/gui/calc/popup.c
-@@ -536,7 +536,7 @@
-   
- 	dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
- 				  GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
--				  message);
-+				  "%s", message);
- 	gtk_dialog_run(GTK_DIALOG(dialog));
- 	gtk_widget_destroy(dialog);
- #else
-@@ -556,7 +556,7 @@
+@@ -549,7 +549,7 @@
    
  	dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
  				  GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
@@ -23,7 +14,7 @@ Last-Update: 2013-08-15
  	gtk_dialog_run(GTK_DIALOG(dialog));
  	gtk_widget_destroy(dialog);
  }
-@@ -857,7 +857,7 @@
+@@ -850,7 +850,7 @@
  
  		dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
  					   GTK_MESSAGE_INFO,

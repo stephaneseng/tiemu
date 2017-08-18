@@ -4,22 +4,22 @@ Author: Scott Howard
 Reviewed-by: Luca Falavigna <dktrkranz@debian.org>
 Reviewed-by: gregor herrmann <gregoa@debian.org>
 Reviewed-by: Andreas B. Mundt <andi@debian.org>
-Last-Update: 2013-08-15
+Last-Update: 2017-08-18
 
 --- a/src/gui/calc/calc.c
 +++ b/src/gui/calc/calc.c
-@@ -313,7 +313,7 @@
+@@ -310,7 +310,7 @@
+                                                 gpointer         user_data)
  {
-     gdk_draw_pixmap(
-         widget->window,
--		widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
-+		widget->style->fg_gc[gtk_widget_get_state (widget)],
- 		pixmap,
- 		event->area.x, event->area.y,
- 		event->area.x, event->area.y,
+ 	gdk_draw_pixmap(widget->window,
+-	                widget->style->fg_gc[GTK_WIDGET_STATE (widget)],
++	                widget->style->fg_gc[gtk_widget_get_state (widget)],
+ 	                pixmap,
+ 	                event->area.x, event->area.y,
+ 	                event->area.x, event->area.y,
 --- a/src/gui/calc/screen.c
 +++ b/src/gui/calc/screen.c
-@@ -187,7 +187,7 @@
+@@ -189,7 +189,7 @@
  	skin_infos.image = gdk_pixbuf_scale_simple(skin_infos.raw, wr.wr.w, wr.wr.h, GDK_INTERP_NEAREST);
  
  	// and draw image into pixmap (next, into window on expose event)
@@ -28,7 +28,7 @@ Last-Update: 2013-08-15
  		  skin_infos.image, 0, 0, 0, 0, -1, -1, GDK_RGB_DITHER_NONE, 0, 0);
  	gdk_window_invalidate_rect(main_wnd->window, &wr.gr, FALSE);
  }
-@@ -204,7 +204,7 @@
+@@ -206,7 +206,7 @@
  		gdk_pixbuf_scale_simple(skin_infos.raw, sr.w, sr.h, GDK_INTERP_NEAREST);
  
  	// and draw
@@ -37,7 +37,7 @@ Last-Update: 2013-08-15
  		  skin_infos.image, ls.x, ls.y, lr.x, lr.y, lr.w, lr.h, GDK_RGB_DITHER_NONE, 0, 0);
  	gtk_widget_queue_draw_area(area, lr.x, lr.y, lr.w, lr.h);
  }
-@@ -324,7 +324,7 @@
+@@ -326,7 +326,7 @@
  			skin_infos.image = gdk_pixbuf_scale_simple(lcd, lr.w, lr.h, GDK_INTERP_NEAREST);
  
  			// and draw image into pixmap (next, into window on expose event)
@@ -46,7 +46,7 @@ Last-Update: 2013-08-15
  			 skin_infos.image, src.x, src.y, lr.x, lr.y, src.w, src.h,
  			  GDK_RGB_DITHER_NONE, 0, 0);
  			gtk_widget_queue_draw_area(area, lr.x, lr.y, src.w, src.h);
-@@ -332,7 +332,7 @@
+@@ -334,7 +334,7 @@
  		else
  		{
  			// and draw image into pixmap (next, into window on expose event)
@@ -57,7 +57,7 @@ Last-Update: 2013-08-15
  			gtk_widget_queue_draw_area(area, lr.x, lr.y, src.w, src.h);
 --- a/src/gui/debugger/dbg_all.c
 +++ b/src/gui/debugger/dbg_all.c
-@@ -90,21 +90,21 @@
+@@ -97,21 +97,21 @@
  {	
  	WND_TMR_START();
  
@@ -87,7 +87,7 @@ Last-Update: 2013-08-15
  		dbgiop_refresh_window();
  
  	WND_TMR_STOP("Debugger Refresh Time");
-@@ -163,7 +163,7 @@
+@@ -170,7 +170,7 @@
  	gtk_debugger_refresh();
  
  	// enable the debugger if GDB disabled it
@@ -96,7 +96,7 @@ Last-Update: 2013-08-15
  		gtk_debugger_enable();
  
  	// handle automatic debugging requests
-@@ -180,7 +180,7 @@
+@@ -187,7 +187,7 @@
  
  			ti68k_bkpt_get_pgmentry_offset(id, &handle, &offset);
  			ti68k_bkpt_del_pgmentry(handle);
@@ -107,7 +107,7 @@ Last-Update: 2013-08-15
  			delete_command(NULL, 0);
 --- a/src/gui/debugger/dbg_bkpts.c
 +++ b/src/gui/debugger/dbg_bkpts.c
-@@ -388,7 +388,7 @@
+@@ -393,7 +393,7 @@
  		gtk_window_iconify(GTK_WINDOW(wnd));
  #endif
  
@@ -118,7 +118,7 @@ Last-Update: 2013-08-15
  	return wnd;
 --- a/src/gui/debugger/dbg_code.c
 +++ b/src/gui/debugger/dbg_code.c
-@@ -1117,7 +1117,7 @@
+@@ -1123,7 +1123,7 @@
  
  int dbgcode_quit_enabled(void)
  {
@@ -129,7 +129,7 @@ Last-Update: 2013-08-15
  static int close_debugger_wrapper(gpointer data)
 --- a/src/gui/debugger/dbg_dock.c
 +++ b/src/gui/debugger/dbg_dock.c
-@@ -151,22 +151,22 @@
+@@ -156,22 +156,22 @@
  
  void dbgdock_show_all(int all)
  {
@@ -160,7 +160,7 @@ Last-Update: 2013-08-15
  }
 --- a/src/gui/debugger/dbg_heap.c
 +++ b/src/gui/debugger/dbg_heap.c
-@@ -171,7 +171,7 @@
+@@ -176,7 +176,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.heap));
  #endif
  
@@ -171,7 +171,7 @@ Last-Update: 2013-08-15
  	return dbgw.heap;
 --- a/src/gui/debugger/dbg_iop.c
 +++ b/src/gui/debugger/dbg_iop.c
-@@ -455,7 +455,7 @@
+@@ -460,7 +460,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.iop));
  #endif
      
@@ -182,7 +182,7 @@ Last-Update: 2013-08-15
  	return dbgw.iop;
 --- a/src/gui/debugger/dbg_mem.c
 +++ b/src/gui/debugger/dbg_mem.c
-@@ -435,7 +435,7 @@
+@@ -446,7 +446,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.mem));
  #endif
  
@@ -193,7 +193,7 @@ Last-Update: 2013-08-15
      return dbgw.mem;
 --- a/src/gui/debugger/dbg_pclog.c
 +++ b/src/gui/debugger/dbg_pclog.c
-@@ -163,7 +163,7 @@
+@@ -168,7 +168,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.pclog));
  #endif
  
@@ -204,7 +204,7 @@ Last-Update: 2013-08-15
  	return dbgw.pclog;
 --- a/src/gui/debugger/dbg_regs.c
 +++ b/src/gui/debugger/dbg_regs.c
-@@ -302,7 +302,7 @@
+@@ -307,7 +307,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.regs));
  #endif
  
@@ -215,7 +215,7 @@ Last-Update: 2013-08-15
  	return dbgw.regs;
 --- a/src/gui/debugger/dbg_stack.c
 +++ b/src/gui/debugger/dbg_stack.c
-@@ -197,7 +197,7 @@
+@@ -203,7 +203,7 @@
  		gtk_window_iconify(GTK_WINDOW(dbgw.stack));
  #endif
  
@@ -226,7 +226,7 @@ Last-Update: 2013-08-15
  	return dbgw.stack;
 --- a/src/gui/debugger/dbg_wnds.c
 +++ b/src/gui/debugger/dbg_wnds.c
-@@ -74,21 +74,21 @@
+@@ -79,21 +79,21 @@
  	if(options3.dbg_dock)
  		return;
  
@@ -256,7 +256,7 @@ Last-Update: 2013-08-15
          gtk_window_iconify(GTK_WINDOW(dbgw.iop));
  }
  
-@@ -98,21 +98,21 @@
+@@ -103,21 +103,21 @@
  	if(options3.dbg_dock)
  		return;
  
@@ -286,7 +286,7 @@ Last-Update: 2013-08-15
          gtk_window_deiconify(GTK_WINDOW(dbgw.iop));
  }
  
-@@ -122,21 +122,21 @@
+@@ -127,21 +127,21 @@
      if(options3.dbg_dock)
  		return;
  
@@ -316,7 +316,7 @@ Last-Update: 2013-08-15
          gtk_widget_show(dbgw.iop);
  }
  
-@@ -146,21 +146,21 @@
+@@ -151,21 +151,21 @@
      if(options3.dbg_dock)
  		return;
  
@@ -346,7 +346,7 @@ Last-Update: 2013-08-15
          gtk_widget_hide(dbgw.iop);
  }
  
-@@ -338,7 +338,7 @@
+@@ -343,7 +343,7 @@
  	if(!options3.dbg_dock)
  	{
  		g_signal_handlers_block_by_func(GTK_OBJECT(item), on_registers1_activate, NULL);
@@ -355,7 +355,7 @@ Last-Update: 2013-08-15
  		g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_registers1_activate, NULL);
  	}
  	else
-@@ -350,7 +350,7 @@
+@@ -355,7 +355,7 @@
  	if(!options3.dbg_dock)
  	{
  		g_signal_handlers_block_by_func(GTK_OBJECT(item), on_breakpoints1_activate, NULL);
@@ -364,7 +364,7 @@ Last-Update: 2013-08-15
  		g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_breakpoints1_activate, NULL);
  	}
  	else
-@@ -362,7 +362,7 @@
+@@ -367,7 +367,7 @@
  	if(!options3.dbg_dock)
  	{
  		g_signal_handlers_block_by_func(GTK_OBJECT(item), on_memory1_activate, NULL);
@@ -373,7 +373,7 @@ Last-Update: 2013-08-15
  		g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_memory1_activate, NULL);
  	}
  	else
-@@ -372,7 +372,7 @@
+@@ -377,7 +377,7 @@
      elt = g_list_nth(list, 3);
      item = GTK_CHECK_MENU_ITEM(elt->data);
      g_signal_handlers_block_by_func(GTK_OBJECT(item), on_pc_log1_activate, NULL);
@@ -382,7 +382,7 @@ Last-Update: 2013-08-15
      g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_pc_log1_activate, NULL);
  
      // stack
-@@ -381,7 +381,7 @@
+@@ -386,7 +386,7 @@
  	if(!options3.dbg_dock)
  	{
  		g_signal_handlers_block_by_func(GTK_OBJECT(item), on_stack_frame1_activate, NULL);
@@ -391,7 +391,7 @@ Last-Update: 2013-08-15
  		g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_stack_frame1_activate, NULL);
  	}
  	else
-@@ -393,7 +393,7 @@
+@@ -398,7 +398,7 @@
  	if(!options3.dbg_dock)
  	{
  		g_signal_handlers_block_by_func(GTK_OBJECT(item), on_heap_frame1_activate, NULL);
@@ -400,7 +400,7 @@ Last-Update: 2013-08-15
  		g_signal_handlers_unblock_by_func(GTK_OBJECT(item), on_heap_frame1_activate, NULL);
  	}
  	else
-@@ -403,7 +403,7 @@
+@@ -408,7 +408,7 @@
  	elt = g_list_nth(list, 6);
      item = GTK_CHECK_MENU_ITEM(elt->data);
      g_signal_handlers_block_by_func(GTK_OBJECT(item), on_ioports_frame1_activate, NULL);

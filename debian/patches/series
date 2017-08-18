@@ -1,5 +1,3 @@
-replace_GtkFunction.patch
-replace_GtkNotebookPage.patch
 disable-GTK_DISABLE_DEPRECATED.patch
 format-security.patch
 replace-GTK_WIDGET.patch
