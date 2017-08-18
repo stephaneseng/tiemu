@@ -4,7 +4,7 @@
   * MC68000 emulation - machine dependent bits
   *
   * Copyright 1996 Bernd Schmidt
-  * $Id: m68k.h 1695 2005-08-26 21:05:37Z kevinkofler $
+  * $Id$
   */
 
  

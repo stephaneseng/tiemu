@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: screenshot.c 2620 2007-08-01 05:17:09Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *  Copyright (c) 2005, Julien Blache

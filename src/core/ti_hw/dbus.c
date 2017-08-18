@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dbus.c 2839 2009-05-08 19:50:07Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -355,15 +355,15 @@ int df_checkread(void)
     reason why I am explaining the idea and mechanisms.
 
     The idea is to use TiLP's libticalcs since libticalcs contains all the code
-    needed for communicating with a TI (software protocol, file handling). 
+    needed for communicating with a TI calculator (software protocol, file handling). 
     The libticalcs is built on libticables, a library which handles link cables
     (hardware protocol).
-    In fact, I simply reimplement the basic functions of libticables usually 
+    In fact, we simply reimplement the basic functions of libticables usually 
     used by libticalcs for sending/receiving data. These functions exchange
     bytes with the linkport at HW level (ports.c).
     The libticalcs provides the abstraction we need for this.
 
-	Wonderful, isn't it ?! Take a look at the 'TiLP framework' power ;-)
+    Wonderful, isn't it ?! Feel the power of the TiLP framework ;-)
 */
 
 /* libticables functions (link API) */
@@ -661,11 +661,11 @@ int recfile(void)
 
 	if(ve)
 	{
-		char *basename;
+		char *file_basename;
 
 		//single
-		basename = ticonv_varname_to_filename(calc_handle->model, ve->name, ve->type);
-		strcat(dst_fn, basename);
+		file_basename = ticonv_varname_to_filename(calc_handle->model, ve->name, ve->type);
+		strcat(dst_fn, file_basename);
 		strcat(dst_fn, ".");
 		strcat(dst_fn, tifiles_vartype2fext(calc_handle->model, ve->type));
 

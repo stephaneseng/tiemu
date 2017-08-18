@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: readcpu.h 2681 2007-11-20 18:01:02Z roms $ */
+/* $Id$ */
 
 ENUMDECL {
   Dreg, Areg, Aind, Aipi, Apdi, Ad16, Ad8r,

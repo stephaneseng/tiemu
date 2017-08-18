@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: bkpts.h 2689 2007-11-30 03:58:24Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

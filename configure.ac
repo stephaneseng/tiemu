@@ -3,10 +3,11 @@ dnl $Id: configure.in 409 2004-06-07 21:10:20Z roms $
 
 dnl Init.
 AC_PREREQ(2.57)
-AC_INIT(TiEmu, 3.03, [tiemu-users@lists.sourceforge.net])
+AC_INIT(TiEmu, 3.04, [tiemu-users@lists.sourceforge.net])
 
 AM_INIT_AUTOMAKE([dist-bzip2])
 AM_MAINTAINER_MODE
+AC_CONFIG_MACRO_DIR([m4])
 
 AC_PREFIX_DEFAULT(/usr/local)
 
@@ -16,6 +17,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([
   Makefile
   build/Makefile
+  build/mingw/Makefile
   glade/Makefile
   help/Makefile
   man/Makefile
@@ -25,8 +27,6 @@ AC_CONFIG_FILES([
   po/Makefile.in
   skins/Makefile
   src/Makefile
-  tiemu.lsm
-  tiemu.spec
 ])
 
 AC_MSG_CHECKING([for something to drink while compiling])
@@ -39,6 +39,7 @@ AC_PROG_LIBTOOL
 
 # Checks for programs.
 AC_PROG_CC
+AC_PROG_CXX
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 AC_PROG_LN_S
@@ -49,6 +50,7 @@ AC_CHECK_TOOL(RC, windres, windres)
 
 # Checks for libraries.
 AM_GNU_GETTEXT(external)
+AM_GNU_GETTEXT_VERSION([0.16])
 AC_SUBST(INCINTL)
 
 PKG_CHECK_MODULES(TICABLES, ticables2 >= 1.3.0)
@@ -98,7 +100,6 @@ AC_CHECK_HEADERS([fcntl.h])
 AC_CHECK_HEADERS([libintl.h])
 AC_CHECK_HEADERS([sys/timeb.h])
 AC_CHECK_HEADERS(stdint.h)
-AC_CHECK_HEADERS([tilp2/ticables.h tilp2/ticalcs.h tilp2/tifiles.h])
 dnl AC_CHECK_HEADERS([Carbon/Carbon.h])
 
 dnl # Add Carbon framework if detected
@@ -149,10 +150,10 @@ CFLAGS="$CFLAGS $ARCH"
 # Check for SDL if sound support is wanted
 AC_ARG_ENABLE(sound,
   AC_HELP_STRING([--disable-sound], [disable sound emulation]),
-  [tiemu_use_sound=$enableval], [tiemu_use_sound=yes])
+  [tiemu_cv_use_sound=$enableval], [tiemu_cv_use_sound=yes])
 AC_CACHE_CHECK([whether to enable sound emulation],
-  [tiemu_use_sound], [tiemu_use_sound=yes])
-if test "x$tiemu_use_sound" = "xyes"; then
+  [tiemu_cv_use_sound], [tiemu_cv_use_sound=yes])
+if test "x$tiemu_cv_use_sound" = "xyes"; then
         SDL_VERSION=1.2.0
         AM_PATH_SDL($SDL_VERSION,
                     :,
@@ -167,7 +168,7 @@ AC_SUBST(SDL_CFLAGS)
 AC_SUBST(SDL_LIBS)
 
 # KDE dialogs support
-AC_ARG_WITH(kde, AC_HELP_STRING([--without-kde], [Compile without KDE support]), [kde=$withval], [kde=default])
+AC_ARG_WITH(kde, AC_HELP_STRING([--with-kde], [Compile with KDE support]), [kde=$withval], [kde=no])
 if test "x$kde" = "xdefault"; then
   case $host_os in
     *mingw*)
@@ -183,6 +184,7 @@ if test "x$kde" = "xyes"; then
         AC_PATH_KDE
         AC_DEFINE(WITH_KDE, 1, [Use KDE support])
 fi
+AM_CONDITIONAL(USE_KDE, test "x$kde" = "xyes")
 AC_SUBST(kde)
 
 # Ensure MSVC-compatible struct packing convention is used when
@@ -221,6 +223,8 @@ case $host_os in
   fi
   ;;
 esac
+
+AM_CONDITIONAL(OS_WIN32, test "$msnative_struct")
 
 # Check for the new -fvisibility=hidden flag introduced in gcc 4.0
 # Allow to reduce shared library size and avoid symbol clash
@@ -288,31 +292,31 @@ AC_SUBST(CXXFLAGS)
 # Debugger support (can be disabled for embedded architectures)
 AC_ARG_ENABLE(debugger,
   AC_HELP_STRING([--disable-debugger], [disable the built-in debugger]),
-  [tiemu_use_debugger=$enableval], [tiemu_use_debugger=yes])
+  [tiemu_cv_use_debugger=$enableval], [tiemu_cv_use_debugger=yes])
 AC_CACHE_CHECK([whether to use the debugger],
-  [tiemu_use_debugger], [tiemu_use_debugger=yes])
-if test x$tiemu_use_debugger = xno; then
+  [tiemu_cv_use_debugger], [tiemu_cv_use_debugger=yes])
+if test x$tiemu_cv_use_debugger = xno; then
   AC_DEFINE(NO_DEBUGGER, 1, [Defined to disable the debugger])
 fi
 
 # GDB support (can be disabled)
 AC_ARG_ENABLE(gdb,
   AC_HELP_STRING([--disable-gdb], [disable the GDB-based source-level debugger]),
-  [tiemu_use_gdb=$enableval], [tiemu_use_gdb=$tiemu_use_debugger])
+  [tiemu_cv_use_gdb=$enableval], [tiemu_cv_use_gdb=$tiemu_cv_use_debugger])
 AC_CACHE_CHECK([whether to use the GDB-based source-level debugger],
-  [tiemu_use_gdb], [tiemu_use_gdb=$tiemu_use_debugger])
-if test x$tiemu_use_gdb = xno; then
+  [tiemu_cv_use_gdb], [tiemu_cv_use_gdb=$tiemu_cv_use_debugger])
+if test x$tiemu_cv_use_gdb = xno; then
   CFLAGS="$CFLAGS -DNO_GDB"
 fi
-AM_CONDITIONAL(NO_GDB, test x$tiemu_use_gdb = xno)
+AM_CONDITIONAL(NO_GDB, test x$tiemu_cv_use_gdb = xno)
 
 # It makes no sense to enable GDB without the debugger!
-if test x$tiemu_use_debugger = xno -a x$tiemu_use_gdb = xyes; then
+if test x$tiemu_cv_use_debugger = xno -a x$tiemu_cv_use_gdb = xyes; then
   AC_MSG_ERROR([cannot enable GDB without the debugger])
 fi
 
 # Run GDB configury (if enabled)
-if test x$tiemu_use_gdb = xyes; then
+if test x$tiemu_cv_use_gdb = xyes; then
   ac_configure_args="$ac_configure_args --target=m68k-coff --disable-tui --disable-werror"
   changequote(<<,>>)
   ac_configure_args=`echo "$ac_configure_args" | sed "s,'CC=[^']*',,g;s,'CFLAGS=[^']*',,g;s,'CXX=[^']*',,g;s,'CXXFLAGS=[^']*',,g;s,'LDFLAGS=[^']*',,g;s,'LIBS=[^']*',,g;s,'build_alias=[^']*',,g;s,'host_alias=[^']*',,g;s,'target_alias=[^']*',,g"`

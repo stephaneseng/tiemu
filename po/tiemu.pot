@@ -8,15 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: tiemu-users@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-05-30 00:05+0200\n"
+"POT-Creation-Date: 2011-03-16 20:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/core/ti_hw/flash.c:261
+#: src/core/ti_hw/flash.c:270
 #, c-format
 msgid "found SSP=$%06x and PC=$%06x at offset 0x%x"
 msgstr ""
@@ -391,7 +392,7 @@ msgid "User Interrupt vectors"
 msgstr ""
 
 #: src/core/type2str.c:192 src/core/type2str.c:208 src/core/type2str.c:221
-#: src/gui/debugger/dbg_bkpts.c:296 glade/dbg_cause-2.str:11
+#: src/gui/debugger/dbg_bkpts.c:301 glade/dbg_cause-2.str:11
 msgid "access"
 msgstr ""
 
@@ -424,7 +425,7 @@ msgid "unknown"
 msgstr ""
 
 #: src/core/type2str.c:209 src/core/type2str.c:223
-#: src/gui/debugger/dbg_bkpts.c:296
+#: src/gui/debugger/dbg_bkpts.c:301
 msgid "range"
 msgstr ""
 
@@ -464,9 +465,9 @@ msgid "PLEASE READ THE DOCUMENTATION FOR DETAILS\n"
 msgstr ""
 
 #: src/misc/files.c:95 src/misc/files.c:107 src/misc/files.c:123
-#: src/gui/calc/keyboard.c:77 src/gui/calc/popup.c:176
+#: src/gui/calc/keyboard.c:75 src/gui/calc/popup.c:176
 #: src/gui/calc/popup.c:179 src/gui/calc/popup.c:191 src/gui/dboxes.c:42
-#: src/gui/fs_misc.c:155 src/gui/fs_misc.c:158
+#: src/gui/fs_misc.c:154 src/gui/fs_misc.c:157
 msgid "Information"
 msgstr ""
 
@@ -493,8 +494,8 @@ msgid ""
 "Overwrite?"
 msgstr ""
 
-#: src/misc/files.c:153 src/gui/dboxes.c:44 src/gui/fs_misc.c:82
-#: src/gui/fs_misc.c:239
+#: src/misc/files.c:153 src/gui/dboxes.c:44 src/gui/fs_misc.c:81
+#: src/gui/fs_misc.c:238
 msgid "Warning"
 msgstr ""
 
@@ -518,10 +519,10 @@ msgstr ""
 msgid "New name: "
 msgstr ""
 
-#: src/misc/files.c:209 src/misc/tie_error.c:78 src/gui/calc/popup.c:797
-#: src/gui/calc/popup.c:847 src/gui/dboxes.c:48 src/gui/fs_misc.c:212
-#: src/gui/fs_misc.c:391 src/gui/fs_misc.c:421 src/gui/fs_misc.c:437
-#: src/gui/fs_misc.c:502 src/gui/main.c:218 src/gui/main.c:226
+#: src/misc/files.c:209 src/misc/tie_error.c:75 src/gui/calc/popup.c:790
+#: src/gui/calc/popup.c:840 src/gui/dboxes.c:48 src/gui/fs_misc.c:211
+#: src/gui/fs_misc.c:390 src/gui/fs_misc.c:420 src/gui/fs_misc.c:436
+#: src/gui/fs_misc.c:506 src/gui/main.c:218 src/gui/main.c:226
 #: src/gui/main.c:234 src/gui/main.c:242 src/gui/quicksend.c:120
 #: src/gui/wizard.c:253 src/gui/wizard.c:289
 msgid "Error"
@@ -558,17 +559,17 @@ msgstr ""
 msgid "Couldn't open destination file for writing!"
 msgstr ""
 
-#: src/gui/calc/calc.c:234 src/gui/calc/popup.c:655
-#: src/gui/debugger/dbg_bkpts.c:363 src/gui/debugger/dbg_bits.c:50
+#: src/gui/calc/calc.c:236 src/gui/calc/popup.c:648
+#: src/gui/debugger/dbg_bkpts.c:368 src/gui/debugger/dbg_bits.c:50
 #: src/gui/debugger/dbg_cause.c:60 src/gui/debugger/dbg_cause.c:144
-#: src/gui/debugger/dbg_code.c:357 src/gui/debugger/dbg_code.c:698
-#: src/gui/debugger/dbg_code.c:1160 src/gui/debugger/dbg_data.c:56
-#: src/gui/debugger/dbg_entry.c:207 src/gui/debugger/dbg_heap.c:146
-#: src/gui/debugger/dbg_heap.c:267 src/gui/debugger/dbg_iop.c:430
-#: src/gui/debugger/dbg_mem.c:712 src/gui/debugger/dbg_mem.c:1087
-#: src/gui/debugger/dbg_mem.c:1311 src/gui/debugger/dbg_pclog.c:138
-#: src/gui/debugger/dbg_regs.c:194 src/gui/debugger/dbg_regs.c:539
-#: src/gui/debugger/dbg_stack.c:163 src/gui/debugger/dbg_stack.c:417
+#: src/gui/debugger/dbg_code.c:363 src/gui/debugger/dbg_code.c:704
+#: src/gui/debugger/dbg_code.c:1166 src/gui/debugger/dbg_data.c:56
+#: src/gui/debugger/dbg_entry.c:207 src/gui/debugger/dbg_heap.c:151
+#: src/gui/debugger/dbg_heap.c:272 src/gui/debugger/dbg_iop.c:435
+#: src/gui/debugger/dbg_mem.c:723 src/gui/debugger/dbg_mem.c:1098
+#: src/gui/debugger/dbg_mem.c:1322 src/gui/debugger/dbg_pclog.c:143
+#: src/gui/debugger/dbg_regs.c:199 src/gui/debugger/dbg_regs.c:546
+#: src/gui/debugger/dbg_stack.c:169 src/gui/debugger/dbg_stack.c:423
 #: src/gui/debugger/dbg_vectors.c:145 src/gui/logger/log_link.c:62
 #: src/gui/infos.c:50 src/gui/manpage.c:72 src/gui/pbars.c:63
 #: src/gui/quicksend.c:59 src/gui/release.c:77 src/gui/romversion.c:191
@@ -577,21 +578,21 @@ msgstr ""
 msgid "%s: GUI loading failed!\n"
 msgstr ""
 
-#: src/gui/calc/calc.c:751
+#: src/gui/calc/calc.c:739
 #, c-format
 msgid "screenshot to %s... "
 msgstr ""
 
-#: src/gui/calc/calc.c:770
+#: src/gui/calc/calc.c:758
 msgid "unsupported screenshot options combination, screenshot aborted."
 msgstr ""
 
-#: src/gui/calc/calc.c:797
+#: src/gui/calc/calc.c:785
 #, c-format
 msgid "failed to save pixbuf file: %s: %s"
 msgstr ""
 
-#: src/gui/calc/calc.c:802
+#: src/gui/calc/calc.c:790
 msgid "done!"
 msgstr ""
 
@@ -633,11 +634,7 @@ msgstr ""
 msgid "Manual_en.html"
 msgstr ""
 
-#: src/gui/calc/popup.c:533
-msgid "You're using GTK+ >= 2.12 so bookmark support is currently unavailable."
-msgstr ""
-
-#: src/gui/calc/popup.c:553
+#: src/gui/calc/popup.c:546
 msgid ""
 "There are several ways to get in touch if you encounter a problem with TiEmu "
 "or if you have questions, suggestions, bug reports, etc:\n"
@@ -649,15 +646,22 @@ msgid ""
 "tracker/?group_id=23169).\n"
 "\n"
 "Before e-mailing the TiEmu team, make sure you have read the manual and/or "
-"the FAQ...."
+"the FAQ..."
 msgstr ""
 
-#: src/gui/calc/popup.c:797
+#: src/gui/calc/popup.c:790
 msgid "Unable to run ShellExecute extension."
 msgstr ""
 
-#: src/gui/calc/popup.c:847
+#: src/gui/calc/popup.c:840
 msgid "Spawn error: do you have Firefox installed?"
+msgstr ""
+
+#: src/gui/calc/popup.c:847
+msgid ""
+"A web browser has been launched: this may take a while before it appears. If "
+"it is already launched, the page may be opened in the existing window or "
+"tab, depending on the browser's settings."
 msgstr ""
 
 #: src/gui/calc/skinops.c:449
@@ -665,87 +669,87 @@ msgstr ""
 msgid "loading skin: %s (%d x %d)"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:63
+#: src/gui/debugger/dbg_bkpts.c:68
 msgid "Symbol"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:63 src/gui/romversion.c:88
+#: src/gui/debugger/dbg_bkpts.c:68 src/gui/romversion.c:88
 #: glade/dbg_data-2.str:22
 msgid "Type"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:63
+#: src/gui/debugger/dbg_bkpts.c:68
 msgid "Status"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:63 glade/log_link-2.str:9
+#: src/gui/debugger/dbg_bkpts.c:68 glade/log_link-2.str:9
 msgid "Start"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:63
+#: src/gui/debugger/dbg_bkpts.c:68
 msgid "End"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:63 glade/dbg_data-2.str:11
+#: src/gui/debugger/dbg_bkpts.c:68 glade/dbg_data-2.str:11
 msgid "Mode"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:140 src/gui/debugger/dbg_bkpts.c:167
-#: src/gui/debugger/dbg_bkpts.c:195 src/gui/debugger/dbg_bkpts.c:224
-#: src/gui/debugger/dbg_bkpts.c:251 src/gui/debugger/dbg_bkpts.c:335
+#: src/gui/debugger/dbg_bkpts.c:145 src/gui/debugger/dbg_bkpts.c:172
+#: src/gui/debugger/dbg_bkpts.c:200 src/gui/debugger/dbg_bkpts.c:229
+#: src/gui/debugger/dbg_bkpts.c:256 src/gui/debugger/dbg_bkpts.c:340
 msgid "enabled"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:140 src/gui/debugger/dbg_bkpts.c:167
-#: src/gui/debugger/dbg_bkpts.c:195 src/gui/debugger/dbg_bkpts.c:224
-#: src/gui/debugger/dbg_bkpts.c:251 src/gui/debugger/dbg_bkpts.c:335
+#: src/gui/debugger/dbg_bkpts.c:145 src/gui/debugger/dbg_bkpts.c:172
+#: src/gui/debugger/dbg_bkpts.c:200 src/gui/debugger/dbg_bkpts.c:229
+#: src/gui/debugger/dbg_bkpts.c:256 src/gui/debugger/dbg_bkpts.c:340
 msgid "disabled"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:143 src/gui/debugger/dbg_bkpts.c:338
+#: src/gui/debugger/dbg_bkpts.c:148 src/gui/debugger/dbg_bkpts.c:343
 msgid "one-shot"
 msgstr ""
 
-#: src/gui/debugger/dbg_bkpts.c:426
+#: src/gui/debugger/dbg_bkpts.c:431
 msgid "dbg_bkpts-2.glade: GUI loading failed !\n"
 msgstr ""
 
-#: src/gui/debugger/dbg_code.c:75 src/gui/debugger/dbg_heap.c:55
-#: src/gui/debugger/dbg_iop.c:299 src/gui/debugger/dbg_mem.c:185
-#: src/gui/debugger/dbg_pclog.c:54 src/gui/debugger/dbg_stack.c:58
+#: src/gui/debugger/dbg_code.c:81 src/gui/debugger/dbg_heap.c:60
+#: src/gui/debugger/dbg_iop.c:304 src/gui/debugger/dbg_mem.c:196
+#: src/gui/debugger/dbg_pclog.c:59 src/gui/debugger/dbg_stack.c:64
 msgid "Address"
 msgstr ""
 
-#: src/gui/debugger/dbg_code.c:75
+#: src/gui/debugger/dbg_code.c:81
 msgid "Opcode"
 msgstr ""
 
-#: src/gui/debugger/dbg_code.c:75
+#: src/gui/debugger/dbg_code.c:81
 msgid "Operand"
 msgstr ""
 
-#: src/gui/debugger/dbg_code.c:1244
+#: src/gui/debugger/dbg_code.c:1250
 msgid "Choose font..."
 msgstr ""
 
-#: src/gui/debugger/dbg_entry.c:91 src/gui/debugger/dbg_iop.c:264
+#: src/gui/debugger/dbg_entry.c:91 src/gui/debugger/dbg_iop.c:269
 #: src/gui/debugger/dbg_vectors.c:53
 msgid "Name"
 msgstr ""
 
-#: src/gui/debugger/dbg_heap.c:55
+#: src/gui/debugger/dbg_heap.c:60
 msgid "Id"
 msgstr ""
 
-#: src/gui/debugger/dbg_heap.c:55 src/gui/romversion.c:88
+#: src/gui/debugger/dbg_heap.c:60 src/gui/romversion.c:88
 msgid "Size"
 msgstr ""
 
-#: src/gui/debugger/dbg_iop.c:272 src/gui/debugger/dbg_stack.c:58
+#: src/gui/debugger/dbg_iop.c:277 src/gui/debugger/dbg_stack.c:64
 msgid "Value"
 msgstr ""
 
-#: src/gui/debugger/dbg_iop.c:308
+#: src/gui/debugger/dbg_iop.c:313
 msgid "Mask"
 msgstr ""
 
@@ -758,7 +762,7 @@ msgstr ""
 msgid "Framework version (cables=%s, files=%s, calcs=%s, conv=%s)"
 msgstr ""
 
-#: src/gui/device.c:59 src/gui/wizard.c:95 src/gui/wizard.c:180
+#: src/gui/device.c:58 src/gui/wizard.c:95 src/gui/wizard.c:180
 #: src/gui/wizard.c:219
 msgid "comm.c: GUI loading failed !\n"
 msgstr ""
@@ -771,69 +775,69 @@ msgstr ""
 msgid "Open file"
 msgstr ""
 
-#: src/gui/fs_misc.c:83
+#: src/gui/fs_misc.c:82
 msgid ""
 "The state image you are attempting to load does not match the current "
 "running image. Press OK if you want TiEmu to automatically load the "
 "corresponding image or Cancel to abort."
 msgstr ""
 
-#: src/gui/fs_misc.c:156
+#: src/gui/fs_misc.c:155
 msgid ""
 "You do not seem to have saved your settings. Configuration file saved (in "
 "tiemu.ini)."
 msgstr ""
 
-#: src/gui/fs_misc.c:159
+#: src/gui/fs_misc.c:158
 msgid ""
 "You do not seem to have saved your settings. Configuration file saved (in ~/."
 "tiemu)."
 msgstr ""
 
-#: src/gui/fs_misc.c:173
+#: src/gui/fs_misc.c:172
 msgid "Sending app(s)"
 msgstr ""
 
-#: src/gui/fs_misc.c:177 src/gui/fs_misc.c:185
+#: src/gui/fs_misc.c:176 src/gui/fs_misc.c:184
 msgid "Sending var(s)"
 msgstr ""
 
-#: src/gui/fs_misc.c:181 src/gui/fs_misc.c:189
+#: src/gui/fs_misc.c:180 src/gui/fs_misc.c:188
 msgid "Restoring"
 msgstr ""
 
-#: src/gui/fs_misc.c:212 src/gui/fs_misc.c:391 src/gui/quicksend.c:120
+#: src/gui/fs_misc.c:211 src/gui/fs_misc.c:390 src/gui/quicksend.c:120
 msgid "This file is not a valid TI file."
 msgstr ""
 
-#: src/gui/fs_misc.c:236
+#: src/gui/fs_misc.c:235
 #, c-format
 msgid ""
 "The current link cable <%s> port <%s> does not allow direct file loading. Do "
 "you let me change link port settings to allow direct file loading?"
 msgstr ""
 
-#: src/gui/fs_misc.c:421
+#: src/gui/fs_misc.c:420
 msgid "Does not seem to be an upgrade."
 msgstr ""
 
-#: src/gui/fs_misc.c:437
+#: src/gui/fs_misc.c:436
 msgid "Cannot load the upgrade."
 msgstr ""
 
-#: src/gui/fs_misc.c:473 src/gui/fs_misc.c:483
+#: src/gui/fs_misc.c:476 src/gui/fs_misc.c:486
 msgid "HW type"
 msgstr ""
 
-#: src/gui/fs_misc.c:474
+#: src/gui/fs_misc.c:477
 msgid "The FLASH upgrade can be imported as HW1 or HW2. Please choose..."
 msgstr ""
 
-#: src/gui/fs_misc.c:484
+#: src/gui/fs_misc.c:487
 msgid "The FLASH upgrade can be imported as HW3 or HW4. Please choose..."
 msgstr ""
 
-#: src/gui/fs_misc.c:502
+#: src/gui/fs_misc.c:506
 msgid "This is not a valid file"
 msgstr ""
 
@@ -2323,62 +2327,70 @@ msgid "TIGCC"
 msgstr ""
 
 #: glade/popup-2.str:81
-msgid "http://www.tilp.info"
+msgid "http://trac.godzil.net/gcc4ti"
 msgstr ""
 
 #: glade/popup-2.str:82
-msgid "TiLP"
+msgid "GCC4TI"
 msgstr ""
 
 #: glade/popup-2.str:83
-msgid "http://education.ti.com"
+msgid "http://www.tilp.info"
 msgstr ""
 
 #: glade/popup-2.str:84
-msgid "TI Education"
+msgid "TiLP"
 msgstr ""
 
 #: glade/popup-2.str:85
-msgid "http://www.ticalc.org"
+msgid "http://education.ti.com"
 msgstr ""
 
 #: glade/popup-2.str:86
-msgid "ticalc.org"
+msgid "TI Education"
 msgstr ""
 
 #: glade/popup-2.str:87
-msgid "How to report a bug or a problem."
+msgid "http://www.ticalc.org"
 msgstr ""
 
 #: glade/popup-2.str:88
-msgid "Bu_g report"
+msgid "ticalc.org"
 msgstr ""
 
 #: glade/popup-2.str:89
-msgid "Display the log of all changes."
+msgid "How to report a bug or a problem."
 msgstr ""
 
 #: glade/popup-2.str:90
-msgid "_ChangeLog"
+msgid "Bu_g report"
 msgstr ""
 
 #: glade/popup-2.str:91
-msgid "About TiEmu..."
+msgid "Display the log of all changes."
 msgstr ""
 
 #: glade/popup-2.str:92
-msgid "_About..."
+msgid "_ChangeLog"
 msgstr ""
 
 #: glade/popup-2.str:93
-msgid "_Infos..."
+msgid "About TiEmu..."
 msgstr ""
 
 #: glade/popup-2.str:94
-msgid "Just exits."
+msgid "_About..."
 msgstr ""
 
 #: glade/popup-2.str:95
+msgid "_Infos..."
+msgstr ""
+
+#: glade/popup-2.str:96
+msgid "Just exits."
+msgstr ""
+
+#: glade/popup-2.str:97
 msgid "E_xit without saving state"
 msgstr ""
 

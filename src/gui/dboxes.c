@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dboxes.c 2753 2007-12-30 23:14:15Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *  Copyright (C) 1999-2004  Romain Lievin

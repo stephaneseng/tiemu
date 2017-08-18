@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: engine.c 2686 2007-11-30 01:24:44Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *

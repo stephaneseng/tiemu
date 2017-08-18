@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: cmdline.h 1695 2005-08-26 21:05:37Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *

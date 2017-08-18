@@ -4,7 +4,7 @@
   * Memory access functions
   *
   * Copyright 1996 Bernd Schmidt
-  * $Id: maccess.h 1695 2005-08-26 21:05:37Z kevinkofler $
+  * $Id$
   */
 
 static __inline__ uae_u32 do_get_mem_long(uae_u32 *a)

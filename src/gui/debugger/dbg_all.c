@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dbg_all.c 2832 2009-05-08 10:56:40Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -36,6 +36,13 @@
 #endif
 #ifdef __MINGW32__
 #include <windows.h>
+#endif
+
+#if GTK_CHECK_VERSION(2,18,0)
+#undef GTK_WIDGET_SENSITIVE
+#define GTK_WIDGET_SENSITIVE(wid) (gtk_widget_get_sensitive(wid))
+#undef GTK_WIDGET_VISIBLE
+#define GTK_WIDGET_VISIBLE(wid) (gtk_widget_get_visible(wid))
 #endif
 
 #include "ti68k_int.h"

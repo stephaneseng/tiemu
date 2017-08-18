@@ -5,7 +5,7 @@
   *
   * Copyright 1995, 1996 Ed Hanway
   * Copyright 1995-2001 Bernd Schmidt
-  * $Id: options.h 2009 2006-02-25 06:33:50Z kevinkofler $
+  * $Id$
   */
 
 #include <stdio.h> // FILE

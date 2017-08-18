@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: version.h 2820 2009-05-03 14:07:15Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *  Copyright (c) 2000-2001, Thomas Corvazier, Romain Lievin
@@ -36,7 +36,7 @@
 */
 
 #ifdef __WIN32__
-# define TIEMU_VERSION "3.03"		// For Win32
+# define TIEMU_VERSION "3.04"		// For Win32
 #else
 # define TIEMU_VERSION VERSION
 #endif

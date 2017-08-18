@@ -2,14 +2,16 @@
 # Copyright (C) 2007 Romain Liévin
 # This file is distributed under the same license as the libtifiles package.
 #
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: tiemu\n"
 "Report-Msgid-Bugs-To: tiemu-users@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-05-30 00:05+0200\n"
-"PO-Revision-Date: 2004-04-13 13:21+0000\n"
-"Last-Translator: Romain Liévin <roms@tilp.info>\n"
+"POT-Creation-Date: 2011-03-16 20:18+0100\n"
+"PO-Revision-Date: 2010-03-01 20:49+0100\n"
+"Last-Translator: Lionel Debroux <lionel_debroux@yahoo.fr>\n"
 "Language-Team: Français <tiemu-devel@lists.sf.net>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,7 +19,7 @@ msgstr ""
 
 # ##, c-format
 # #, c-format
-#: src/core/ti_hw/flash.c:261
+#: src/core/ti_hw/flash.c:270
 #, c-format
 msgid "found SSP=$%06x and PC=$%06x at offset 0x%x"
 msgstr "trouvé un SSP=$%06x et un PC=$%06x à l'offset 0x%x"
@@ -441,7 +443,7 @@ msgid "User Interrupt vectors"
 msgstr "Vecteur User Interrupt"
 
 #: src/core/type2str.c:192 src/core/type2str.c:208 src/core/type2str.c:221
-#: src/gui/debugger/dbg_bkpts.c:296 glade/dbg_cause-2.str:11
+#: src/gui/debugger/dbg_bkpts.c:301 glade/dbg_cause-2.str:11
 msgid "access"
 msgstr "accès"
 
@@ -474,7 +476,7 @@ msgid "unknown"
 msgstr "inconnu"
 
 #: src/core/type2str.c:209 src/core/type2str.c:223
-#: src/gui/debugger/dbg_bkpts.c:296
+#: src/gui/debugger/dbg_bkpts.c:301
 msgid "range"
 msgstr "intervalle"
 
@@ -522,9 +524,9 @@ msgid "PLEASE READ THE DOCUMENTATION FOR DETAILS\n"
 msgstr "VEUILLEZ LIRE LA DOCUMENTATION POUR PLUS DE DETAILS\n"
 
 #: src/misc/files.c:95 src/misc/files.c:107 src/misc/files.c:123
-#: src/gui/calc/keyboard.c:77 src/gui/calc/popup.c:176
+#: src/gui/calc/keyboard.c:75 src/gui/calc/popup.c:176
 #: src/gui/calc/popup.c:179 src/gui/calc/popup.c:191 src/gui/dboxes.c:42
-#: src/gui/fs_misc.c:155 src/gui/fs_misc.c:158
+#: src/gui/fs_misc.c:154 src/gui/fs_misc.c:157
 msgid "Information"
 msgstr "Information"
 
@@ -556,8 +558,8 @@ msgstr ""
 "Le fichier %s existe déjà.\n"
 "L'écraser ?"
 
-#: src/misc/files.c:153 src/gui/dboxes.c:44 src/gui/fs_misc.c:82
-#: src/gui/fs_misc.c:239
+#: src/misc/files.c:153 src/gui/dboxes.c:44 src/gui/fs_misc.c:81
+#: src/gui/fs_misc.c:238
 msgid "Warning"
 msgstr "Avertissement"
 
@@ -581,10 +583,10 @@ msgstr "Renommer le fichier"
 msgid "New name: "
 msgstr "Nouveau nom: "
 
-#: src/misc/files.c:209 src/misc/tie_error.c:78 src/gui/calc/popup.c:797
-#: src/gui/calc/popup.c:847 src/gui/dboxes.c:48 src/gui/fs_misc.c:212
-#: src/gui/fs_misc.c:391 src/gui/fs_misc.c:421 src/gui/fs_misc.c:437
-#: src/gui/fs_misc.c:502 src/gui/main.c:218 src/gui/main.c:226
+#: src/misc/files.c:209 src/misc/tie_error.c:75 src/gui/calc/popup.c:790
+#: src/gui/calc/popup.c:840 src/gui/dboxes.c:48 src/gui/fs_misc.c:211
+#: src/gui/fs_misc.c:390 src/gui/fs_misc.c:420 src/gui/fs_misc.c:436
+#: src/gui/fs_misc.c:506 src/gui/main.c:218 src/gui/main.c:226
 #: src/gui/main.c:234 src/gui/main.c:242 src/gui/quicksend.c:120
 #: src/gui/wizard.c:253 src/gui/wizard.c:289
 msgid "Error"
@@ -625,17 +627,17 @@ msgid "Couldn't open destination file for writing!"
 msgstr "Ne peut pas ouvrir le fichier de destination en écriture!"
 
 # #, c-format
-#: src/gui/calc/calc.c:234 src/gui/calc/popup.c:655
-#: src/gui/debugger/dbg_bkpts.c:363 src/gui/debugger/dbg_bits.c:50
+#: src/gui/calc/calc.c:236 src/gui/calc/popup.c:648
+#: src/gui/debugger/dbg_bkpts.c:368 src/gui/debugger/dbg_bits.c:50
 #: src/gui/debugger/dbg_cause.c:60 src/gui/debugger/dbg_cause.c:144
-#: src/gui/debugger/dbg_code.c:357 src/gui/debugger/dbg_code.c:698
-#: src/gui/debugger/dbg_code.c:1160 src/gui/debugger/dbg_data.c:56
-#: src/gui/debugger/dbg_entry.c:207 src/gui/debugger/dbg_heap.c:146
-#: src/gui/debugger/dbg_heap.c:267 src/gui/debugger/dbg_iop.c:430
-#: src/gui/debugger/dbg_mem.c:712 src/gui/debugger/dbg_mem.c:1087
-#: src/gui/debugger/dbg_mem.c:1311 src/gui/debugger/dbg_pclog.c:138
-#: src/gui/debugger/dbg_regs.c:194 src/gui/debugger/dbg_regs.c:539
-#: src/gui/debugger/dbg_stack.c:163 src/gui/debugger/dbg_stack.c:417
+#: src/gui/debugger/dbg_code.c:363 src/gui/debugger/dbg_code.c:704
+#: src/gui/debugger/dbg_code.c:1166 src/gui/debugger/dbg_data.c:56
+#: src/gui/debugger/dbg_entry.c:207 src/gui/debugger/dbg_heap.c:151
+#: src/gui/debugger/dbg_heap.c:272 src/gui/debugger/dbg_iop.c:435
+#: src/gui/debugger/dbg_mem.c:723 src/gui/debugger/dbg_mem.c:1098
+#: src/gui/debugger/dbg_mem.c:1322 src/gui/debugger/dbg_pclog.c:143
+#: src/gui/debugger/dbg_regs.c:199 src/gui/debugger/dbg_regs.c:546
+#: src/gui/debugger/dbg_stack.c:169 src/gui/debugger/dbg_stack.c:423
 #: src/gui/debugger/dbg_vectors.c:145 src/gui/logger/log_link.c:62
 #: src/gui/infos.c:50 src/gui/manpage.c:72 src/gui/pbars.c:63
 #: src/gui/quicksend.c:59 src/gui/release.c:77 src/gui/romversion.c:191
@@ -646,24 +648,24 @@ msgstr "%s: échec de chargement de l'interface graphique !\n"
 
 # ##, c-format
 # #, c-format
-#: src/gui/calc/calc.c:751
+#: src/gui/calc/calc.c:739
 #, c-format
 msgid "screenshot to %s... "
 msgstr "capture écran dans %s..."
 
-#: src/gui/calc/calc.c:770
+#: src/gui/calc/calc.c:758
 msgid "unsupported screenshot options combination, screenshot aborted."
 msgstr ""
 "combinaison d'options de capture écran incompatibles; capture écran avortée."
 
 # ##, c-format
 # #, c-format
-#: src/gui/calc/calc.c:797
+#: src/gui/calc/calc.c:785
 #, c-format
 msgid "failed to save pixbuf file: %s: %s"
 msgstr "n'a pû sauvegarder le fichier pixbuf: %s: %s"
 
-#: src/gui/calc/calc.c:802
+#: src/gui/calc/calc.c:790
 msgid "done!"
 msgstr "fait !"
 
@@ -707,13 +709,7 @@ msgstr "Effacer la RAM ?"
 msgid "Manual_en.html"
 msgstr "Manual_en.html"
 
-#: src/gui/calc/popup.c:533
-msgid "You're using GTK+ >= 2.12 so bookmark support is currently unavailable."
-msgstr ""
-"Vous utilisez GTK+ >= 2.12: les marques-pages ne sont pas (encore) "
-"disponibles."
-
-#: src/gui/calc/popup.c:553
+#: src/gui/calc/popup.c:546
 msgid ""
 "There are several ways to get in touch if you encounter a problem with TiEmu "
 "or if you have questions, suggestions, bug reports, etc:\n"
@@ -725,16 +721,38 @@ msgid ""
 "tracker/?group_id=23169).\n"
 "\n"
 "Before e-mailing the TiEmu team, make sure you have read the manual and/or "
-"the FAQ...."
+"the FAQ..."
 msgstr ""
+"Il y a plusieurs façons de prendre contact si vous rencontrez un problème "
+"avec TIEmu ou si vous avez des questions, des suggestions, des bugs à "
+"signaler, etc:\n"
+"- si vous avez des questions ou des problèmes généraux, utilisez d'abord la "
+"liste de diffusion des utilisateurs (http://tiemu-users@list.sf.net).\n"
+"- si vous voulez discuter à propos de TiEmu, vous pouvez utiliser le forum "
+"de TiEmu (http://sourceforge.net/forum/?group_id=23169).\n"
+"- pour les signalements de bugs, utilisez le 'Bug Tracking System' (http://"
+"sourceforge.net/tracker/?group_id=23169).\n"
+"\n"
+"Avant d'envoyer un e-mail à l'équipe TIEmu, lisez s'il vous plaît le manuel "
+"et/ou la FAQ..."
 
-#: src/gui/calc/popup.c:797
+#: src/gui/calc/popup.c:790
 msgid "Unable to run ShellExecute extension."
 msgstr "Impossible d'exécuter l'extension ShellExecute."
 
-#: src/gui/calc/popup.c:847
+#: src/gui/calc/popup.c:840
 msgid "Spawn error: do you have Firefox installed?"
 msgstr "Erreur de lancement: un navigateur est-il installé ?"
+
+#: src/gui/calc/popup.c:847
+msgid ""
+"A web browser has been launched: this may take a while before it appears. If "
+"it is already launched, the page may be opened in the existing window or "
+"tab, depending on the browser's settings."
+msgstr ""
+"Un navigateur internet a été lancé: son apparition peut prendre plusieurs "
+"secondes. S'il est déjà lancé, la page sera peut-être ouverte dans la "
+"fenêtre ou l'onglet existant, selon les réglages du navigateur."
 
 # ##, c-format
 # #, c-format
@@ -743,87 +761,87 @@ msgstr "Erreur de lancement: un navigateur est-il installé ?"
 msgid "loading skin: %s (%d x %d)"
 msgstr "chargement du skin: %s(%d x %d)"
 
-#: src/gui/debugger/dbg_bkpts.c:63
+#: src/gui/debugger/dbg_bkpts.c:68
 msgid "Symbol"
 msgstr "Symbole"
 
-#: src/gui/debugger/dbg_bkpts.c:63 src/gui/romversion.c:88
+#: src/gui/debugger/dbg_bkpts.c:68 src/gui/romversion.c:88
 #: glade/dbg_data-2.str:22
 msgid "Type"
 msgstr "Type"
 
-#: src/gui/debugger/dbg_bkpts.c:63
+#: src/gui/debugger/dbg_bkpts.c:68
 msgid "Status"
 msgstr "Statut"
 
-#: src/gui/debugger/dbg_bkpts.c:63 glade/log_link-2.str:9
+#: src/gui/debugger/dbg_bkpts.c:68 glade/log_link-2.str:9
 msgid "Start"
 msgstr "Début"
 
-#: src/gui/debugger/dbg_bkpts.c:63
+#: src/gui/debugger/dbg_bkpts.c:68
 msgid "End"
 msgstr "Fin"
 
-#: src/gui/debugger/dbg_bkpts.c:63 glade/dbg_data-2.str:11
+#: src/gui/debugger/dbg_bkpts.c:68 glade/dbg_data-2.str:11
 msgid "Mode"
 msgstr "Mode"
 
-#: src/gui/debugger/dbg_bkpts.c:140 src/gui/debugger/dbg_bkpts.c:167
-#: src/gui/debugger/dbg_bkpts.c:195 src/gui/debugger/dbg_bkpts.c:224
-#: src/gui/debugger/dbg_bkpts.c:251 src/gui/debugger/dbg_bkpts.c:335
+#: src/gui/debugger/dbg_bkpts.c:145 src/gui/debugger/dbg_bkpts.c:172
+#: src/gui/debugger/dbg_bkpts.c:200 src/gui/debugger/dbg_bkpts.c:229
+#: src/gui/debugger/dbg_bkpts.c:256 src/gui/debugger/dbg_bkpts.c:340
 msgid "enabled"
 msgstr "activé"
 
-#: src/gui/debugger/dbg_bkpts.c:140 src/gui/debugger/dbg_bkpts.c:167
-#: src/gui/debugger/dbg_bkpts.c:195 src/gui/debugger/dbg_bkpts.c:224
-#: src/gui/debugger/dbg_bkpts.c:251 src/gui/debugger/dbg_bkpts.c:335
+#: src/gui/debugger/dbg_bkpts.c:145 src/gui/debugger/dbg_bkpts.c:172
+#: src/gui/debugger/dbg_bkpts.c:200 src/gui/debugger/dbg_bkpts.c:229
+#: src/gui/debugger/dbg_bkpts.c:256 src/gui/debugger/dbg_bkpts.c:340
 msgid "disabled"
 msgstr "désactivé"
 
-#: src/gui/debugger/dbg_bkpts.c:143 src/gui/debugger/dbg_bkpts.c:338
+#: src/gui/debugger/dbg_bkpts.c:148 src/gui/debugger/dbg_bkpts.c:343
 msgid "one-shot"
 msgstr "un coup"
 
-#: src/gui/debugger/dbg_bkpts.c:426
+#: src/gui/debugger/dbg_bkpts.c:431
 msgid "dbg_bkpts-2.glade: GUI loading failed !\n"
 msgstr "dbg_bkpts-2.glade: échec du chargement de l'interface graphique !\n"
 
-#: src/gui/debugger/dbg_code.c:75 src/gui/debugger/dbg_heap.c:55
-#: src/gui/debugger/dbg_iop.c:299 src/gui/debugger/dbg_mem.c:185
-#: src/gui/debugger/dbg_pclog.c:54 src/gui/debugger/dbg_stack.c:58
+#: src/gui/debugger/dbg_code.c:81 src/gui/debugger/dbg_heap.c:60
+#: src/gui/debugger/dbg_iop.c:304 src/gui/debugger/dbg_mem.c:196
+#: src/gui/debugger/dbg_pclog.c:59 src/gui/debugger/dbg_stack.c:64
 msgid "Address"
 msgstr "Adresse"
 
-#: src/gui/debugger/dbg_code.c:75
+#: src/gui/debugger/dbg_code.c:81
 msgid "Opcode"
 msgstr "Code opératoire"
 
-#: src/gui/debugger/dbg_code.c:75
+#: src/gui/debugger/dbg_code.c:81
 msgid "Operand"
 msgstr "Opérande"
 
-#: src/gui/debugger/dbg_code.c:1244
+#: src/gui/debugger/dbg_code.c:1250
 msgid "Choose font..."
 msgstr "Choisir police..."
 
-#: src/gui/debugger/dbg_entry.c:91 src/gui/debugger/dbg_iop.c:264
+#: src/gui/debugger/dbg_entry.c:91 src/gui/debugger/dbg_iop.c:269
 #: src/gui/debugger/dbg_vectors.c:53
 msgid "Name"
 msgstr "Nom"
 
-#: src/gui/debugger/dbg_heap.c:55
+#: src/gui/debugger/dbg_heap.c:60
 msgid "Id"
 msgstr "Id"
 
-#: src/gui/debugger/dbg_heap.c:55 src/gui/romversion.c:88
+#: src/gui/debugger/dbg_heap.c:60 src/gui/romversion.c:88
 msgid "Size"
 msgstr "Taille"
 
-#: src/gui/debugger/dbg_iop.c:272 src/gui/debugger/dbg_stack.c:58
+#: src/gui/debugger/dbg_iop.c:277 src/gui/debugger/dbg_stack.c:64
 msgid "Value"
 msgstr "Valeur"
 
-#: src/gui/debugger/dbg_iop.c:308
+#: src/gui/debugger/dbg_iop.c:313
 msgid "Mask"
 msgstr "Masque"
 
@@ -837,7 +855,7 @@ msgstr "Numéro"
 msgid "Framework version (cables=%s, files=%s, calcs=%s, conv=%s)"
 msgstr "Framework version (cables=%s, files=%s, calcs=%s, conv=%s)"
 
-#: src/gui/device.c:59 src/gui/wizard.c:95 src/gui/wizard.c:180
+#: src/gui/device.c:58 src/gui/wizard.c:95 src/gui/wizard.c:180
 #: src/gui/wizard.c:219
 msgid "comm.c: GUI loading failed !\n"
 msgstr "comm.c : échec du chargement de l'interface graphique !\n"
@@ -850,7 +868,7 @@ msgstr "Sauver un fichier"
 msgid "Open file"
 msgstr "Ouvrir un fichier"
 
-#: src/gui/fs_misc.c:83
+#: src/gui/fs_misc.c:82
 msgid ""
 "The state image you are attempting to load does not match the current "
 "running image. Press OK if you want TiEmu to automatically load the "
@@ -860,7 +878,7 @@ msgstr ""
 "actuellement en train de tourner. Appuyer sur OK si vous voulez que TiEmu "
 "charge automatiquement l'image correspondante; appuyez sur Annuler sinon."
 
-#: src/gui/fs_misc.c:156
+#: src/gui/fs_misc.c:155
 msgid ""
 "You do not seem to have saved your settings. Configuration file saved (in "
 "tiemu.ini)."
@@ -868,7 +886,7 @@ msgstr ""
 "Il semble que vous n'avez pas sauvegardé votre configuration. Configuration "
 "sauvée (dans tiemu.ini)."
 
-#: src/gui/fs_misc.c:159
+#: src/gui/fs_misc.c:158
 msgid ""
 "You do not seem to have saved your settings. Configuration file saved (in ~/."
 "tiemu)."
@@ -876,23 +894,23 @@ msgstr ""
 "Il semble que vous n'avez pas sauvé votre configuration. Sauvé (dans ~/."
 "tiemu)."
 
-#: src/gui/fs_misc.c:173
+#: src/gui/fs_misc.c:172
 msgid "Sending app(s)"
 msgstr "Envoi d'application(s)"
 
-#: src/gui/fs_misc.c:177 src/gui/fs_misc.c:185
+#: src/gui/fs_misc.c:176 src/gui/fs_misc.c:184
 msgid "Sending var(s)"
 msgstr "Envoi de(s) variable(s)"
 
-#: src/gui/fs_misc.c:181 src/gui/fs_misc.c:189
+#: src/gui/fs_misc.c:180 src/gui/fs_misc.c:188
 msgid "Restoring"
 msgstr "Restaurer"
 
-#: src/gui/fs_misc.c:212 src/gui/fs_misc.c:391 src/gui/quicksend.c:120
+#: src/gui/fs_misc.c:211 src/gui/fs_misc.c:390 src/gui/quicksend.c:120
 msgid "This file is not a valid TI file."
 msgstr "Ce fichier n'est pas un fichier TI valide."
 
-#: src/gui/fs_misc.c:236
+#: src/gui/fs_misc.c:235
 #, c-format
 msgid ""
 "The current link cable <%s> port <%s> does not allow direct file loading. Do "
@@ -901,27 +919,27 @@ msgstr ""
 "Le cable <%s> port <%s> actuel ne permet pas le chargement direct de "
 "fichier. Voulez-vous laisser TiEmu le changer pour vous ?"
 
-#: src/gui/fs_misc.c:421
+#: src/gui/fs_misc.c:420
 msgid "Does not seem to be an upgrade."
 msgstr "Le fichier ne semble pas etre une mise à jour."
 
-#: src/gui/fs_misc.c:437
+#: src/gui/fs_misc.c:436
 msgid "Cannot load the upgrade."
 msgstr "Impossible de charger la mise à jour."
 
-#: src/gui/fs_misc.c:473 src/gui/fs_misc.c:483
+#: src/gui/fs_misc.c:476 src/gui/fs_misc.c:486
 msgid "HW type"
 msgstr "HW type"
 
-#: src/gui/fs_misc.c:474
+#: src/gui/fs_misc.c:477
 msgid "The FLASH upgrade can be imported as HW1 or HW2. Please choose..."
 msgstr "La MAJ peut être importé comme HW1 ou HW2. Veuillez choisir..."
 
-#: src/gui/fs_misc.c:484
+#: src/gui/fs_misc.c:487
 msgid "The FLASH upgrade can be imported as HW3 or HW4. Please choose..."
 msgstr "La MAJ peut être importé comme HW3 ou HW4. Veuillez choisir..."
 
-#: src/gui/fs_misc.c:502
+#: src/gui/fs_misc.c:506
 msgid "This is not a valid file"
 msgstr "Ce fichier n'est pas un fichier valide."
 
@@ -2429,73 +2447,81 @@ msgstr "_Favoris"
 
 #: glade/popup-2.str:77
 msgid "http://lpg.ticalc.org/prj_tiemu"
-msgstr "http://lpg.ticalc.org, le groupe de programmeurs Linux."
+msgstr "http://lpg.ticalc.org/prj_tiemu"
 
 #: glade/popup-2.str:79
 msgid "http://tigcc.ticalc.org"
-msgstr "ticalc.org"
+msgstr "http://tigcc.ticalc.org"
 
 #: glade/popup-2.str:80
 msgid "TIGCC"
 msgstr "TIGCC"
 
 #: glade/popup-2.str:81
+msgid "http://trac.godzil.net/gcc4ti"
+msgstr "http://trac.godzil.net/gcc4ti"
+
+#: glade/popup-2.str:82
+msgid "GCC4TI"
+msgstr "GCC4TI"
+
+#: glade/popup-2.str:83
 msgid "http://www.tilp.info"
 msgstr "http://www.tilp.info"
 
-#: glade/popup-2.str:82
+#: glade/popup-2.str:84
 msgid "TiLP"
 msgstr "TiLP"
 
-#: glade/popup-2.str:83
+#: glade/popup-2.str:85
 msgid "http://education.ti.com"
 msgstr "http://education.ti.com"
 
-#: glade/popup-2.str:84
+#: glade/popup-2.str:86
 msgid "TI Education"
 msgstr "TI Education"
 
-#: glade/popup-2.str:85
+#: glade/popup-2.str:87
 msgid "http://www.ticalc.org"
 msgstr "http://www.ticalc.org"
 
-#: glade/popup-2.str:86
+#: glade/popup-2.str:88
 msgid "ticalc.org"
 msgstr "ticalc.org"
 
-#: glade/popup-2.str:87
+#: glade/popup-2.str:89
 msgid "How to report a bug or a problem."
 msgstr "Comment envoyer un rapport de bogue ou un problème."
 
-#: glade/popup-2.str:88
+#: glade/popup-2.str:90
 msgid "Bu_g report"
 msgstr "Rapport de _bogue"
 
-#: glade/popup-2.str:89
+#: glade/popup-2.str:91
 msgid "Display the log of all changes."
 msgstr "Afficher la liste des changements."
 
-#: glade/popup-2.str:90
+#: glade/popup-2.str:92
 msgid "_ChangeLog"
 msgstr "_Changements"
 
-#: glade/popup-2.str:91
+#: glade/popup-2.str:93
 msgid "About TiEmu..."
 msgstr "A propos de TiEmu..."
 
-#: glade/popup-2.str:92
+#: glade/popup-2.str:94
 msgid "_About..."
 msgstr "A propos..."
 
-#: glade/popup-2.str:93
+#: glade/popup-2.str:95
 msgid "_Infos..."
 msgstr "_Informations..."
 
-#: glade/popup-2.str:94
+#: glade/popup-2.str:96
 msgid "Just exits."
 msgstr "Quitter tout simplement."
 
-#: glade/popup-2.str:95
+#: glade/popup-2.str:97
 msgid "E_xit without saving state"
 msgstr "Quitter sans sauver"
 

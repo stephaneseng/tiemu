@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: release.c 2649 2007-09-17 15:35:08Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *  Copyright (C) 1999-2005  Romain Lievin

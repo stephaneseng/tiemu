@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: build68k.c 1542 2005-06-25 14:27:52Z roms $ */
+/* $Id$ */
 
 /*
  * UAE - The Un*x Amiga Emulator

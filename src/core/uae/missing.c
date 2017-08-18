@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: missing.c 1693 2005-08-25 14:29:36Z roms $ */
+/* $Id$ */
 
  /*
   * UAE - The Un*x Amiga Emulator

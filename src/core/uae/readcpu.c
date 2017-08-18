@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: readcpu.c 2681 2007-11-20 18:01:02Z roms $ */
+/* $Id$ */
 
 /*
  * UAE - The Un*x Amiga Emulator
@@ -251,7 +251,6 @@ static void build_insn (int insn)
 	int bitcnt[lastbit];
 	int bitval[lastbit];
 	int bitpos[lastbit];
-	int i;
 	uae_u16 opc = id.bits;
 	uae_u16 msk, vmsk;
 	int pos = 0;

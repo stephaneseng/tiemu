@@ -4,7 +4,7 @@
   * User configuration options
   *
   * Copyright 1995 - 1998 Bernd Schmidt
-  * $Id: uconfig.h 1380 2005-05-25 09:11:02Z roms $
+  * $Id$
   */
 
 /*

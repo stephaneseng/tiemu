@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: struct.h 2709 2007-12-13 17:37:31Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - a TI emulator
  *  Copyright (c) 2000-2001, Thomas Corvazier, Romain Lievin

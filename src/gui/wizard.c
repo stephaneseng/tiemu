@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: wizard.c 2753 2007-12-30 23:14:15Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -241,7 +241,7 @@ gint display_wz_rom_dbox(void)
 	int err;
 
     // get filename
-	filename = (char *)create_fsel(inst_paths.rom_dir, NULL, "*.rom", FALSE);
+	filename = (char *)create_fsel(inst_paths.rom_dir, NULL, (char *)"*.rom", FALSE);
 	if (filename == NULL)
 	{
 		display_step1_dbox();
@@ -277,7 +277,7 @@ gint display_wz_tib_dbox(void)
 	int err;
 
     // get filename
-	filename = (char *)create_fsel(inst_paths.rom_dir, NULL, "*.89u;*.9xu;*.v2u;*.tib", FALSE);
+	filename = (char *)create_fsel(inst_paths.rom_dir, NULL, (char *)"*.89u;*.9xu;*.v2u;*.tib", FALSE);
 	if (filename == NULL)
 	{
 		display_step1_dbox();

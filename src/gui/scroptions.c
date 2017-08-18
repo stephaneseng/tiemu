@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: scroptions.c 2753 2007-12-30 23:14:15Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -164,7 +164,7 @@ gint display_scroptions_dbox()
 
 void refresh_label(void)
 {
-    gchar *ext = "???";
+    const gchar *ext = "???";
     gchar *str;
 	
     if(label == NULL)

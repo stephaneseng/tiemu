@@ -1,4 +1,4 @@
-SubVersion: $Id: ChangeLog 2842 2009-05-29 14:04:35Z roms $
+SubVersion: $Id$
 
 - 12/02/2008, version 3.03:
 	- [kevin] $2765: fixed crash when debugging TIGCC program with GDB with low-level debugger in dock mode
@@ -30,7 +30,8 @@ SubVersion: $Id: ChangeLog 2842 2009-05-29 14:04:35Z roms $
 	- [roms]  $2836: upgraded deprecated GTK+ code
 	- [roms]  $2838: if link cable reconfiguring fails, fallback to null cable & port
 	- [roms]  $2839: merged Lionel's patch: fix buffer overflow in the disasm routine
-
+		=> released on 30/05/2009
+	
 - 16/09/2007, version 3.02:
 	- [roms]  $2646: screenshots can be copied into the clipboard
 	- [roms]  $2649: use fixed fonts for release and manpage dboxes
@@ -93,7 +94,7 @@ SubVersion: $Id: ChangeLog 2842 2009-05-29 14:04:35Z roms $
 	
 - 07/09/2007, version 3.01b:
   - re-released due to missing USB drivers (libusb0.dll)
-  				=> released on 07/09/2007
+		=> released on 07/09/2007
 
 - 03/09/2007, version 3.01a:
 	- re-released due to missing file in Windows Installer (dhahelper.sys)

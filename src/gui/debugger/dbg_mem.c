@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: dbg_mem.c 2825 2009-05-06 19:48:47Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -32,6 +32,17 @@
 #include <gtk/gtk.h>
 #include <glade/glade.h>
 #include <gdk/gdkkeysyms.h>
+
+#if GTK_CHECK_VERSION(2,18,0)
+#undef GTK_WIDGET_VISIBLE
+#define GTK_WIDGET_VISIBLE(wid) (gtk_widget_get_visible(wid))
+#endif
+
+// Deprecated in GTK 2.22+, but still used by the prototype of the switch-page signal...
+// Our switch-page callback does not use the GtkNotebookPage argument anyway, so let's just make a dummy definition.
+#if GTK_CHECK_VERSION(2,22,0)
+#define GtkNotebookPage GtkNotebook
+#endif
 
 #include <stdio.h>
 #include <stdint.h>
@@ -551,8 +562,8 @@ static GtkWidget* memmap_menu(void)
 
 	menu = gtk_menu_new();
 	g_object_set_data_full(G_OBJECT(menu), "memmap_menu",
-			       gtk_widget_ref(menu),
-			       (GDestroyNotify)g_object_unref);
+	                       g_object_ref(menu),
+	                       (GDestroyNotify)g_object_unref);
 
 	// (re)load mem map
 	result = ti68k_debug_load_memmap(inst_paths.misc_dir);
@@ -574,8 +585,8 @@ static GtkWidget* memmap_menu(void)
 
 		item = gtk_menu_item_new_with_label(label);
 		g_object_set_data_full(G_OBJECT(menu), "c_drive",
-					   gtk_widget_ref(item),
-					   (GDestroyNotify)g_object_unref);
+		                       g_object_ref(item),
+		                       (GDestroyNotify)g_object_unref);
 		gtk_widget_show(item);
 
 		gtk_container_add(GTK_CONTAINER(menu), item);
@@ -595,16 +606,16 @@ dbgmem_button6_clicked                     (GtkButton       *button,
 {
 	GtkWidget *menu;
 	guint butt = 0;
-	guint32 time;
+	guint32 time2;
 
-	time = gtk_get_current_event_time();
+	time2 = gtk_get_current_event_time();
 	menu = memmap_menu();
-	gtk_menu_popup(GTK_MENU(menu), NULL, NULL, NULL, NULL, butt, time);
+	gtk_menu_popup(GTK_MENU(menu), NULL, NULL, NULL, NULL, butt, time2);
 	gtk_widget_show(menu);
 }
 
 GLADE_CB void
-on_notebook1_switch_page               (GtkNotebook     *notebook,
+on_notebook1_switch_page               (GtkNotebook     *notebook2,
                                         GtkNotebookPage *page,
                                         guint            page_num,
                                         gpointer         user_data)
@@ -1238,8 +1249,8 @@ static gint search_highlight(uint32_t blk_beg, uint32_t blk_end, int state)
     // scroll mem
     if(!IS_BOUNDED(tab_adr, blk_beg, tab_adr + DUMP_SIZE))
     {
-        GtkNotebook *nb = GTK_NOTEBOOK(notebook);
-	    gint page = gtk_notebook_get_current_page(nb);
+        nb = GTK_NOTEBOOK(notebook);
+        page = gtk_notebook_get_current_page(nb);
 
         offset = (blk_beg - tab_adr) & 0xfffff0;
         refresh_page(page, offset);

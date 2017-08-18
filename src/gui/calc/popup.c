@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: popup.c 2840 2009-05-08 20:43:47Z kevinkofler $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -225,19 +225,19 @@ void
 on_quick_save_state_image1_activate    (GtkMenuItem     *menuitem,
                                         gpointer         user_data)
 {
-	gchar *basename;
+	gchar *file_basename;
 	gchar *dot;
 
 	// build name
-	basename = g_path_get_basename(params.rom_file);
-	dot = strrchr(basename, '.');
+	file_basename = g_path_get_basename(params.rom_file);
+	dot = strrchr(file_basename, '.');
 	if(dot != NULL)
 		*dot = '\0';
 
 	// set path
 	g_free(params.sav_file);
-	params.sav_file = g_strconcat(inst_paths.img_dir, basename, ".sav", NULL);
-	g_free(basename);
+	params.sav_file = g_strconcat(inst_paths.img_dir, file_basename, ".sav", NULL);
+	g_free(file_basename);
 
 	// save state
 	ti68k_state_save(params.sav_file);
@@ -442,7 +442,7 @@ GLADE_CB void
 on_setup_recording1_activate             (GtkMenuItem     *menuitem,
                                           gpointer         user_data)
 {
-	const gchar *filename = create_fsel(inst_paths.base_dir, "keypress.txt", "*.txt", TRUE);
+	const gchar *filename = create_fsel(inst_paths.base_dir, (char *)"keypress.txt", (char *)"*.txt", TRUE);
 	if (!filename)
 		return;
 
@@ -468,7 +468,7 @@ GLADE_CB void
 on_setup_playing1_activate             (GtkMenuItem     *menuitem,
                                         gpointer         user_data)
 {
-	const gchar *filename = create_fsel(inst_paths.base_dir, NULL, "*.txt", FALSE);
+	const gchar *filename = create_fsel(inst_paths.base_dir, NULL, (char *)"*.txt", FALSE);
 	if (!filename)
 		return;
 
@@ -528,17 +528,10 @@ on_bookmarks1_activate				   (GtkMenuItem		*menuitem,
 										gpointer		user_data)
 {
 #if GTK_CHECK_VERSION(2,12,0)
-	GtkWidget *dialog;
-	const gchar *message =
-    _("You're using GTK+ >= 2.12 so bookmark support is currently unavailable.");
-  
-	dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
-				  GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
-				  message);
-	gtk_dialog_run(GTK_DIALOG(dialog));
-	gtk_widget_destroy(dialog);
+	gchar * url = gtk_widget_get_tooltip_text(GTK_WIDGET(menuitem));
+	go_to_bookmark(url);
 #else
-	GtkTooltipsData* data = gtk_tooltips_data_get(GTK_WIDGET(menuitem)); /* FIXME: deprecated in GTK+ 2.12 */
+	GtkTooltipsData* data = gtk_tooltips_data_get(GTK_WIDGET(menuitem));
 	go_to_bookmark(data->tip_text);
 #endif
 }
@@ -550,7 +543,7 @@ on_bugreport1_activate				   (GtkMenuItem     *menuitem,
 {
 	GtkWidget *dialog;
 	const gchar *message =
-    _("There are several ways to get in touch if you encounter a problem with TiEmu or if you have questions, suggestions, bug reports, etc:\n- if you have general questions or problems, please consider the users' mailing list first (http://tiemu-users@list.sf.net).\n- if you want to discuss about TiEmu, you can use the TiEmu forum (http://sourceforge.net/forum/?group_id=23169).\n- for bug reports, use the 'Bug Tracking System' (http://sourceforge.net/tracker/?group_id=23169).\n\nBefore e-mailing the TiEmu team, make sure you have read the manual and/or the FAQ....");
+    _("There are several ways to get in touch if you encounter a problem with TiEmu or if you have questions, suggestions, bug reports, etc:\n- if you have general questions or problems, please consider the users' mailing list first (http://tiemu-users@list.sf.net).\n- if you want to discuss about TiEmu, you can use the TiEmu forum (http://sourceforge.net/forum/?group_id=23169).\n- for bug reports, use the 'Bug Tracking System' (http://sourceforge.net/tracker/?group_id=23169).\n\nBefore e-mailing the TiEmu team, make sure you have read the manual and/or the FAQ...");
   
 	dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
 				  GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE,
@@ -814,7 +807,7 @@ static void go_to_bookmark(const char *link)
 	// * /usr/bin/mozilla (old Mozilla Suite)
 	//
 	gboolean result;
-	char *apps[] = { 
+	static const char *apps[] = { 
 			"/usr/bin/xdg-open",
 			"/usr/bin/gnome-open",
 			"/usr/bin/sensible-browser",
@@ -851,7 +844,7 @@ static void go_to_bookmark(const char *link)
 	{
 		GtkWidget *dialog;
 		GTimer *timer;
-		const gchar *message = "A web browser has been launched: this may take a while before it appears. If it is already launched, the page will be opened in the existing frame.";
+		const gchar *message = _("A web browser has been launched: this may take a while before it appears. If it is already launched, the page may be opened in the existing window or tab, depending on the browser's settings.");
 
 		dialog = gtk_message_dialog_new(NULL, GTK_DIALOG_MODAL,
 					   GTK_MESSAGE_INFO,

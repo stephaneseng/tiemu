@@ -1,5 +1,5 @@
 /* Hey EMACS -*- linux-c -*- */
-/* $Id: disasm.c 2841 2009-05-15 15:26:47Z roms $ */
+/* $Id$ */
 
 /*  TiEmu - Tiemu Is an EMUlator
  *
@@ -358,7 +358,6 @@ int m68k_dasm(char **line, uint32_t addr)
 			{
 				char c = split[1][6];
 				char *p, *q;
-				gchar *tmp;
 				uint16_t mask;
 
 				g_free(split[1]);
@@ -382,7 +381,6 @@ int m68k_dasm(char **line, uint32_t addr)
 			{
 				char c = split[1][6];
 				char *p, *q;
-				gchar *tmp;
 				uint16_t mask;
 
 				g_free(split[1]);
@@ -425,8 +423,11 @@ int m68k_dasm(char **line, uint32_t addr)
 			}
 			break;
 		case 20:	/* BRA				*/
-			g_free(split[1]);
-			split[1] = g_strdup("BRA");
+			{
+				tmp = g_strdup_printf("BRA.%c", split[1][3]);
+				g_free(split[1]);
+				split[1] = tmp;
+			}
 		break;
 
 		case 19:	/* BTST				*/
@@ -449,7 +450,7 @@ int m68k_dasm(char **line, uint32_t addr)
 		strcpy(p, q);
 		strcat(split[2], tmp);
 	}
-	
+
 	*line = g_strdup_printf("%s %s %s", 
 			split[0] ? split[0] : "", 
 			split[1] ? split[1] : "",

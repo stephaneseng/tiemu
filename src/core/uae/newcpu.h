@@ -4,7 +4,7 @@
   * MC68000 emulation
   *
   * Copyright 1995 Bernd Schmidt
-  * $Id: newcpu.h 2085 2006-05-16 19:28:18Z roms $
+  * $Id$
   */
 
 #include "readcpu.h"
