@@ -1,3 +1,11 @@
+tiemu (3.04~git20110801-nogdb+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 3.04~git20110801-nogdb+dfsg.
+  * Update patches and remove those applied upstream.
+  * Bump Standards-Version to 4.0.1 (no changes needed).
+
+ -- Andreas B. Mundt <andi@debian.org>  Fri, 18 Aug 2017 15:53:16 +0200
+
 tiemu (3.03-nogdb+dfsg-4) unstable; urgency=medium
 
   * Fix FTBFS with latest gcc.  (Closes: #871110).
