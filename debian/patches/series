@@ -2,3 +2,4 @@ disable-GTK_DISABLE_DEPRECATED.patch
 format-security.patch
 replace-GTK_WIDGET.patch
 ftbfs-format-flags
+FTBFS-abort
