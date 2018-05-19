@@ -1,3 +1,14 @@
+tiemu (3.04~git20110801-nogdb+dfsg-2) unstable; urgency=medium
+
+  * Update Vcs-* links to 'salsa.debian.org'.
+  * Bump Standards-Version to 4.1.4 (no changes needed).
+  * Bump compatibility level to 11.
+  * Update debian/rules and dependencies, use latest libraries.
+  * DEP-5 copyright and update 'debian/watch'.
+  * Fix FTBFS with customized abort()-function (closes: #895492).
+
+ -- Andreas B. Mundt <andi@debian.org>  Sat, 19 May 2018 21:24:03 +0300
+
 tiemu (3.04~git20110801-nogdb+dfsg-1) unstable; urgency=medium
 
   * New upstream version 3.04~git20110801-nogdb+dfsg.
