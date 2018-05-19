@@ -18,7 +18,7 @@ Build-Depends: autotools-dev,
                libtifiles-dev (>= 1.1.6),
                texinfo,
                zlib1g-dev
-Standards-Version: 4.0.1
+Standards-Version: 4.1.4
 Homepage: https://github.com/debrouxl/tiemu
 Vcs-Git: https://salsa.debian.org/science-team/tiemu.git
 Vcs-Browser: https://salsa.debian.org/science-team/tiemu
