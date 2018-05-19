@@ -3,8 +3,7 @@ Section: math
 Priority: optional
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Andreas B. Mundt <andi@debian.org>
-Build-Depends: autotools-dev,
-               debhelper (>= 11.0.0),
+Build-Depends: debhelper (>= 11.0.0),
                gettext,
                groff-base,
                libarchive-dev,
@@ -12,10 +11,10 @@ Build-Depends: autotools-dev,
                libglade2-dev,
                libgtk2.0-dev,
                libsdl1.2-dev (>= 1.2.0),
-               libticables-dev (>= 1.3.4),
-               libticalcs-dev (>= 1.1.8),
-               libticonv-dev (>= 1.1.4),
-               libtifiles-dev (>= 1.1.6),
+               libticables-dev (>= 1.3.5),
+               libticalcs-dev (>= 1.1.9),
+               libticonv-dev (>= 1.1.5),
+               libtifiles-dev (>= 1.1.7),
                texinfo,
                zlib1g-dev
 Standards-Version: 4.1.4
