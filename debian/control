@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Uploaders: Andreas B. Mundt <andi@debian.org>
 Build-Depends: autotools-dev,
-               debhelper (>= 9.0.0),
+               debhelper (>= 11.0.0),
                gettext,
                groff-base,
                libarchive-dev,
