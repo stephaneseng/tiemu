@@ -24,7 +24,7 @@ Vcs-Browser: https://salsa.debian.org/science-team/tiemu
 
 Package: tiemu
 Architecture: any
-Depends: iceweasel | www-browser, ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Replaces: gtktiemu
 Conflicts: gtktiemu, tiemu-gdb
 Suggests: tiemu-skinedit
