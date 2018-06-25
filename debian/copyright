@@ -45,7 +45,7 @@ Comment: This package was debianized by Julien Blache <jblache@debian.org> in
  .
  Fully-GPL version by Kevin Kofler:
      <www.tigen.org/kevin.kofler/ti89prog/pedrom-ld-tigcc.zip>
-Files-Excluded: *.sys *.exe *.o *.dll
+Files-Excluded: *.sys *.exe *.o *.dll docs/vkeys/virtualkeycodes.html
 
 Files: *
 Copyright: 1991 the Massachusetts Institute of Technology
