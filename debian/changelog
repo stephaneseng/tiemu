@@ -1,3 +1,12 @@
+tiemu (3.04~git20110801-nogdb+dfsg1-1) unstable; urgency=medium
+
+  * New upstream version 3.04~git20110801-nogdb+dfsg1 with removed copy of
+    web site for DFSG reasons.
+  * Remove www-browser from depends, only needed to read the docs.
+  * Add desktop file.
+
+ -- Andreas B. Mundt <andi@debian.org>  Mon, 25 Jun 2018 14:17:34 +0200
+
 tiemu (3.04~git20110801-nogdb+dfsg-3) unstable; urgency=medium
 
   * Fix 'debian/watch' file.
