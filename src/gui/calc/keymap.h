@@ -36,15 +36,14 @@ typedef struct {
 } KeyTuple;
 
 typedef struct {
-    int pc_key;     // PC key
-    int ti_key;     // TI key
-    int modifier;   // TI key such as TIKEY_ALPHA
+    unsigned int pc_key;   // PC key
+    int          ti_key;   // TI key
+    int          modifier; // TI key such as TIKEY_ALPHA
 } Pc2TiKey;
 
 extern Pc2TiKey keymap[KEYMAP_MAX];
 
 extern const KeyTuple tikeys[];
-extern const KeyTuple pckeys[];
 
 // functions
 

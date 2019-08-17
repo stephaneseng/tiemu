@@ -64,18 +64,6 @@ static int hwkey_to_tikey(guint16 hardware_keycode, int action)
             ti_key = kbd_keymap[i].ti_key;
             modifier = kbd_keymap[i].modifier;
 
-			if(options.kbd_dbg)
-			{
-				gchar *str;
-
-				str = g_strdup_printf("%s:%s,%s\n",
-						keymap_value_to_string(pckeys, hardware_keycode),
-						keymap_value_to_string(tikeys, ti_key),
-						keymap_value_to_string(tikeys, modifier));
-				msg_box1(_("Information"), str);
-				g_free(str);
-			}
-
 			if(modifier != -1)
 			{
                 ti68k_kbd_set_key(modifier, action);
@@ -272,7 +260,7 @@ on_calc_wnd_key_press_event        (GtkWidget       *widget,
         return TRUE;
     }
     else
-        return hwkey_to_tikey(event->hardware_keycode, !0) ? TRUE : FALSE;
+        return hwkey_to_tikey(event->keyval, !0) ? TRUE : FALSE;
 
     return FALSE;
 }
@@ -283,6 +271,6 @@ on_calc_wnd_key_release_event      (GtkWidget       *widget,
                                         GdkEventKey     *event,
                                         gpointer         user_data)
 {
-    return hwkey_to_tikey(event->hardware_keycode, 0) ? TRUE : FALSE;
+    return hwkey_to_tikey(event->keyval, 0) ? TRUE : FALSE;
 }
 

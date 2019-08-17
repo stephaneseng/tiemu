@@ -32,9 +32,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 
 #include "keydefs.h"
-#include "pckeys.h"
 #include "ti68k_int.h"
 #include "keymap.h"
 #include "logging.h"
@@ -171,8 +171,10 @@ int keymap_load(const char *filename)
         }
 
         // convert key names into values
-        pckey = keymap_string_to_value(pckeys, split[0]);
-        if(pckey == -1)
+        if(g_str_has_prefix(split[0], "GDK_"))
+            pckey = gdk_keyval_from_name(split[0] + 4);
+
+        if((!g_str_has_prefix(split[0], "GDK_")) || (pckey == GDK_VoidSymbol) || (pckey == 0))
         {
             fprintf(stderr, "Warning: non-existent PC key: <%s>\n", split[0]);
             g_strfreev(split);
